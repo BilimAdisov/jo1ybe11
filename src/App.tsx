@@ -91,7 +91,6 @@ function App() {
         <Route path='/hats' element={<HatsComponent/>}/>
         <Route path='/caps' element={<CapsComponent/>}/>
         <Route path='/memes' element={<MemesComponent/>}/>
-        <Route path={`${path}/${itemID}`} element={<Item/>}/>
       </Routes>
       {
         itemID.length >= 5  ? <PaginationFcComponent itemPerPage={itemPerPage} totalItem={state.length} paginate={paginate}/> : ''
