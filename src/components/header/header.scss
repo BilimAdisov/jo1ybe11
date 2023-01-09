@@ -1,0 +1,149 @@
+header {
+    .logo {
+        width: 100%;
+        height: 109px;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .logo-container {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-end;
+            position: relative;
+            .header-leftstrip {
+                background-color: azure;
+                height: 3px;
+                width: 50%;
+                position: absolute;
+                left: 0px;
+                animation: leftLine 5s;
+            }
+            @keyframes leftLine {
+                from {
+                    width: 0px;
+                }
+                to {
+                    width: 50%;
+                }
+            }
+            .header-rightstrip {
+                background-color: azure;
+                height: 3px;
+                width: 50%;
+                position: absolute;
+                right: 0px;
+                animation: rightLine 5s;
+            }
+            @keyframes rightLine {
+                from {
+                    width: 0px;
+                }
+                to {
+                    width: 50%;
+                }
+            }
+            img {
+                width: 230px;
+                cursor: pointer;
+            }
+        }
+    }
+    .header {
+        width: 100%;
+        height: 121px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: black;
+        .header-container {
+            .header-list {
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 0 55px 51px 55px ;
+                    li {
+                        a {
+                            font-size: 16px;
+                            line-height: 100%;
+                            font-weight: 400;
+                            color: white;
+                            text-transform: uppercase;
+                            cursor: pointer;
+                            text-decoration: none;
+                            transition: .5s;
+                            position: relative;
+                        }
+                        a::before {
+                            content: '';
+                            background-color: white;
+                            position: absolute;
+                            right: 50%;
+                            bottom: -1px;
+                            width: 0px;
+                            height: 1px;
+                            transition: .5s;
+                        }
+                        a:hover::before {
+                            width: 50%;
+                        }
+                        a::after {
+                            content: '';
+                            background-color: white;
+                            position: absolute;
+                            left: 50%;
+                            bottom: -1px;
+                            width: 0;
+                            height: 1px;
+                            transition: .5s;
+                        }
+                        a:hover::after {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+        .under-list {
+            display: flex;
+            justify-content:flex-end;
+            padding-right: 55px;
+            ul {
+                display: flex;
+                gap: 16px;
+                li {
+                    a {
+                        font-size: 16px;
+                        line-height: 100%;
+                        font-weight: 400;
+                        color: white;
+                        text-transform: uppercase;
+                        cursor: pointer;
+                        text-decoration: none;
+                        transition: 0.5s;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 8px;
+                    }
+                    a:hover {
+                        color: #9c9eaf;
+                    }
+                    .user-icon {
+                        width: 21px;
+                        height: 19.1px;
+                    }
+                    .user-icon:hover {
+                        color: #9c9eaf;
+                    }
+                    .cart-icon {
+                        width: 21.05px;
+                        height: 20.78px;
+                    }
+                }
+            }
+        }
+    }
+}

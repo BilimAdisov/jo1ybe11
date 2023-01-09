@@ -1,0 +1,634 @@
+[
+    {
+        "id":1,
+        "category": "t-shirt",
+        "rus": [
+            {
+                "id": 1,
+                "name": "Вышиванка Крест",
+                "price": 59.56,
+                "image1": "https://cdn.jolybell.com/images/LiPrSxYYWcGmnCO.webp?width=525&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/Q0qOSjkR2h5GtL2.webp?width=476&height=540&quality=90",
+                "image3": "https://cdn.jolybell.com/images/etGTp0CX2m9QzEW.webp?width=428&height=540&quality=90",
+                "image4": "https://cdn.jolybell.com/images/arVWTzdZDqny04a.webp?width=567&height=540&quality=90",
+                "title1": "Традиционная черная вышиванка из приятной к телу ткани лакоста с вышитым орнаментом креста на груди. Модель свободного прямого кроя, застегивается на пуговицы по горловине и длинными рукавами с манжетами на застежке.",
+                "title2": "Вышиванка идеально сочетается как с брюками, так и с джинсами любого цвета, она дополнит ваш обычный образ.",
+                "title3": "Состав ткани 100% хлопок."
+            },
+            {
+                "id": 2,
+                "name": "Вышиванка Ромб",
+                "price": 70.38,
+                "image1": "https://cdn.jolybell.com/images/rjM38ixualwwCmQ.webp?width=566&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/OB6HEoP4XquEbwB.png?width=476&height=540&quality=90",
+                "image3": "https://cdn.jolybell.com/images/eg3SfR2O4bewLTr.png?width=361&height=540&quality=90",
+                "image4": "https://cdn.jolybell.com/images/j4DS6JoNNpmjH7d.png?width=414&height=540&quality=90",
+                "title1": "Традиционная черная вышиванка из приятной к телу ткани лакоста с вышитым орнаментом ромба на горловине, груди и рукавах. Модель свободного прямого кроя с воротником-стойкой, вырезом со скрытыми застежками на полке и длинными рукавами с манжетами на застежке.",
+                "title2": "Вышиванка идеально сочетается как с брюками, так и с джинсами любого цвета, она дополнит ваш обычный образ.",
+                "title3": "Состав ткани 100% хлопок."
+            },
+            {
+                "id": 3,
+                "name": "Родничок",
+                "price": 25.84,
+                "image1": "https://cdn.jolybell.com/images/1ieGvnjBDzt68U7.webp?width=492&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/ncGGTCsxHDBCABF.webp?width=491&height=540&quality=90",
+                "title1": "Макеевский родничок. Мы никогда не простим.",
+                "title2": "*25% на армию. *"
+            },
+            {
+                "id": 4,
+                "name": "Ультра Черная Футболка",
+                "price": 26.25,
+                "image1": "https://cdn.jolybell.com/images/cGNahzAeoJFmDUy.png?width=492&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/LSyXeObk9FlRptz.png?width=491&height=540&quality=90",
+                "title1": "Тонкая. Легкая. Ультра черная.Лимитированная версия футболки B.O.M.J - первая единица контрбрендовой линии одежды. Потрясающие качество в совместительстве с уточненным подходом к деталям, которым не могут похвастаться именитые раздутые фирмы.",
+                "title2": "В комплекте идут стикеры Игра в Кальмара",
+                "title3": "Состав: 95% cotton, 5% spandex. Плотность 170 г/м²"
+            },
+            {
+                "id": 5,
+                "name": "B.O.M.J Black",
+                "price": 26.25,
+                "image1": "https://cdn.jolybell.com/images/ucPsORdrx3gjKUU.webp?width=492&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/6KqdoQNQqbJ8RKy.png?width=491&height=540&quality=90",
+                "title1": "Тонкая. Легкая. Черная. Футболка линейки B.O.M.J - первая единица контрбрендовой линии одежды. Потрясающие качество в совместительстве с утонченным подходом к деталям, которым не могут похвастаться именитые раздутые фирмы.",
+                "title2": "Ткань сорта пенье",
+                "title3": "Состав: 95% cotton, 5% spandex. Плотность 170 г/м²"
+            },
+            {
+                "id": 6,
+                "name": "B.O.M.J White",
+                "price": 26.25,
+                "image1": "https://cdn.jolybell.com/images/23krhtEjb4SgZcQ.png?width=492&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/Q1eA8G3HR8Idq3x.png?width=491&height=540&quality=90",
+                "title1": "Тонкая. Легкая. Белая. Футболка линейки B.O.M.J - первая единица контрбрендовой линии одежды. Потрясающие качество в совместительстве с утонченным подходом к деталям, которым не могут похвастаться именитые раздутые фирмы.",
+                "title2": "Ткань сорта пенье",
+                "title3": "Состав: 95% cotton, 5% spandex. Плотность 170 г/м²"
+            },
+            {
+                "id": 7,
+                "name": "Marginal Black",
+                "price": 26.25,
+                "image1": "https://cdn.jolybell.com/images/9THrvo8ZaDcllU2.png?width=492&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/9ccUK29cPLXg9xK.png?width=491&height=540&quality=90",
+                "title1": "Каждый воспринимает по-своему",
+                "title2": "Ткань сорта пенье",
+                "title3": "Состав: 95% cotton, 5% spandex"
+            },
+            {
+                "id": 8,
+                "name": "Marginal White",
+                "price": 26.25,
+                "image1": "https://cdn.jolybell.com/images/xCgnDk8rfBxNlre.png?width=492&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/BNlRH8izRZYVwpb.webp?width=491&height=540&quality=90",
+                "title1": "Каждый воспринимает по-своему",
+                "title2": "Ткань сорта пенье",
+                "title3": "Состав: 95% cotton, 5% spandex"
+            },
+            {
+                "id": 9,
+                "name": "Tryapka",
+                "price": 26.25,
+                "image1": "https://cdn.jolybell.com/images/oFx2NyWY1bTjEq7.webp?width=492&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/J196fqMbygDe4vD.png?width=491&height=540&quality=90",
+                "title1": "Трудно не заметить поднявшийся с лужи тренд на безвкусную тряпку за 30 тысяч, что примечательно, истории не известен ни один случай, когда она была бы куплена в оригинале. Мы не могли не удержаться, что бы над этим не поглумиться.",
+                "title2": "Ткань сорта пенье",
+                "title3": "Состав: 95% cotton, 5% spandex. Плотность 170 г/м²"
+            },
+            {
+                "id": 10,
+                "name": "Black Mirror",
+                "price": 26.25,
+                "image1": "https://cdn.jolybell.com/images/DZRVnU3g5RWEgOu.webp?width=492&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/BZOj4vmlIpGtthr.png?width=491&height=540&quality=90",
+                "title1": "Осторожно, есть вероятность невольно вертеть чужими головами в округе. Подсказка расшифровки таится в зеркале. Этот продукт - концентрация всей нашей идеологии.",
+                "title2": "Ткань сорта пенье",
+                "title3": "Состав: 95% cotton, 5% spandex. Плотность 170 г/м²"
+            },
+            {
+                "id": 11,
+                "name": "Работяга Black",
+                "price": 26.25,
+                "image1": "https://cdn.jolybell.com/images/cog9X298tSXwlWm.png?width=492&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/IUNa1ZNFw0BxlAq.webp?width=491&height=540&quality=90",
+                "title1": "Пролетариям мерчендайз с капиталистических лап. Пролетариям нечего терять кроме своих цепей, приобретут же они весь мир (и футболочку).",
+                "title2": "Ткань сорта пенье",
+                "title3": "Состав: 95% cotton, 5% spandex. Плотность 170 г/м²"
+            },
+            {
+                "id": 12,
+                "name": "Проволока Black",
+                "price": 26.25,
+                "image1": "https://cdn.jolybell.com/images/w48AXGb9ovFW6sE.webp?width=492&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/nG4Ud49NARkslvD.webp?width=491&height=540&quality=90",
+                "title1": "Первая половина Июня 1934 - в СССР вводится уголовная ответственность за побег за границу СССР. Страна режима и проволоки, что и символизирует этот рисунок.",
+                "title2": "Ткань сорта пенье",
+                "title3": "Состав: 95% cotton, 5% spandex. Плотность 190 г/м² Принт нанесен методом машинной вышивки"
+            }
+        ],
+        "eng":[
+            {
+                "id": 1,
+                "name": "Vyshyvanka cross",
+                "price": 59.56,
+                "image1": "https://cdn.jolybell.com/images/LiPrSxYYWcGmnCO.webp?width=525&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/Q0qOSjkR2h5GtL2.webp?width=476&height=540&quality=90",
+                "image3": "https://cdn.jolybell.com/images/etGTp0CX2m9QzEW.webp?width=428&height=540&quality=90",
+                "image4": "https://cdn.jolybell.com/images/arVWTzdZDqny04a.webp?width=567&height=540&quality=90",
+                "title1": "Traditional black embroidery made of lacoste fabric that is pleasant to the body with an embroidered cross ornament on the chest. The model has a loose, straight cut, a button fastening at the neck and long sleeves with buttoned cuffs.",
+                "title2": "The embroidered jacket is perfectly combined with both trousers and jeans of any color, it will complement your everyday look.",
+                "title3": "The composition of the fabric is 100% cotton."
+            },
+            {
+                "id": 2,
+                "name": "Vyshyvanka rhombus",
+                "price": 70.38,
+                "image1": "https://cdn.jolybell.com/images/rjM38ixualwwCmQ.webp?width=566&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/OB6HEoP4XquEbwB.png?width=476&height=540&quality=90",
+                "image3": "https://cdn.jolybell.com/images/eg3SfR2O4bewLTr.png?width=361&height=540&quality=90",
+                "image4": "https://cdn.jolybell.com/images/j4DS6JoNNpmjH7d.png?width=414&height=540&quality=90",
+                "title1": "Traditional black embroidery made of lacoste fabric that is pleasant to the body with an embroidered rhombus ornament on the neck, chest and sleeves. A loose, straight fit with a stand-up collar, a neckline with concealed placket fastenings and long sleeves with press-stud cuffs.",
+                "title2": "The embroidered jacket is perfectly combined with both trousers and jeans of any color, it will complement your everyday look.",
+                "title3": "The composition of the fabric is 100% cotton."
+            },
+            {
+                "id": 3,
+                "name": "Роднiчок",
+                "price": 25.84,
+                "image1": "https://cdn.jolybell.com/images/1ieGvnjBDzt68U7.webp?width=492&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/ncGGTCsxHDBCABF.webp?width=491&height=540&quality=90",
+                "title1": "Макіївський роднічок. Ми ніколи не пробачим",
+                "title2": "*25% на армию. *"
+            },
+            {
+                "id": 4,
+                "name": "Ultra Black T-shirt",
+                "price": 26.25,
+                "image1": "https://cdn.jolybell.com/images/cGNahzAeoJFmDUy.png?width=492&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/LSyXeObk9FlRptz.png?width=491&height=540&quality=90",
+                "title1": "Thin. Light. Ultra black. The limited edition B.O.M.J T-shirt is the first unit of a counter-brand clothing line. Stunning quality combined with a refined approach to detail, which big-name bloated companies cannot boast.",
+                "title2": "Penye fabric",
+                "title3": "Combination: 95% cotton, 5% spandex. Density 170 gm/m²"
+            },
+            {
+                "id": 5,
+                "name": "B.O.M.J Black",
+                "price": 26.25,
+                "image1": "https://cdn.jolybell.com/images/ucPsORdrx3gjKUU.webp?width=492&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/6KqdoQNQqbJ8RKy.png?width=491&height=540&quality=90",
+                "title1": "Thin. Light. Black. T-shirt of the B.O.M.J line - the first unit of the counter-brand clothing line. Brilliant quality combined with a refined approach to details, that big-name puffed-up companies can't brag about.",
+                "title2": "Penye fabric",
+                "title3": "Combination: 95% cotton, 5% spandex. Density 170 gm/m²"
+            },
+            {
+                "id": 6,
+                "name": "B.O.M.J White",
+                "price": 26.25,
+                "image1": "https://cdn.jolybell.com/images/23krhtEjb4SgZcQ.png?width=492&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/Q1eA8G3HR8Idq3x.png?width=491&height=540&quality=90",
+                "title1": "Thin. Light. White. T-shirt of the B.O.M.J line - the first unit of the counter-brand clothing line. Brilliant quality combined with a refined approach to details, that big-name puffed-up companies can't brag about.",
+                "title2": "Penye fabric",
+                "title3": "Combination: 95% cotton, 5% spandex. Density 170 gm/m²"
+            },
+            {
+                "id": 7,
+                "name": "Marginal Black",
+                "price": 26.25,
+                "image1": "https://cdn.jolybell.com/images/9THrvo8ZaDcllU2.png?width=492&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/9ccUK29cPLXg9xK.png?width=491&height=540&quality=90",
+                "title1": "Everyone's perception is different",
+                "title2": "Penye fabric",
+                "title3": "Combination: 95% cotton, 5% spandex"
+            },
+            {
+                "id": 8,
+                "name": "Marginal White",
+                "price": 26.25,
+                "image1": "https://cdn.jolybell.com/images/xCgnDk8rfBxNlre.png?width=492&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/BNlRH8izRZYVwpb.webp?width=491&height=540&quality=90",
+                "title1": "Everyone's perception is different",
+                "title2": "Penye fabric",
+                "title3": "Combination: 95% cotton, 5% spandex"
+            },
+            {
+                "id": 9,
+                "name": "Tryapka",
+                "price": 26.25,
+                "image1": "https://cdn.jolybell.com/images/oFx2NyWY1bTjEq7.webp?width=492&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/J196fqMbygDe4vD.png?width=491&height=540&quality=90",
+                "title1": "It's hard not to notice the trend that has risen from the puddle for a tasteless rag for 30 thousand, which is remarkable, history doesn't know a single case when it was bought as the original. We couldn't help but mock at this.",
+                "title2": "Penye fabric",
+                "title3": "Combination: 95% cotton, 5% spandex. Density 170 gm/m²"
+            },
+            {
+                "id": 10,
+                "name": "Black Mirror",
+                "price": 26.25,
+                "image1": "https://cdn.jolybell.com/images/DZRVnU3g5RWEgOu.webp?width=492&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/BZOj4vmlIpGtthr.png?width=491&height=540&quality=90",
+                "title1": "Mirrored title Beware, there is a chance of unwillingly turning other people's heads around. The decryption hint is hidden in the mirror. This product - is the concentration of our whole ideology.",
+                "title2": "Penye fabric",
+                "title3": "Combination: 95% cotton, 5% spandex. Density 170 gm/m²"
+            },
+            {
+                "id": 11,
+                "name": "Rabotiaga Black",
+                "price": 26.25,
+                "image1": "https://cdn.jolybell.com/images/cog9X298tSXwlWm.png?width=492&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/IUNa1ZNFw0BxlAq.webp?width=491&height=540&quality=90",
+                "title1": "Merchandise for proletarians from the capitalist paws. The proletarians have nothing to lose except their chains, so let them get the whole world (and a T-shirt).",
+                "title2": "Penye fabric",
+                "title3": "Combination: 95% cotton, 5% spandex. Density 170 gm/m²"
+            },
+            {
+                "id": 12,
+                "name": "Provolka Black",
+                "price": 26.25,
+                "image1": "https://cdn.jolybell.com/images/w48AXGb9ovFW6sE.webp?width=492&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/nG4Ud49NARkslvD.webp?width=491&height=540&quality=90",
+                "title1": "First half of June 1934 - the USSR introduces criminal liability for escaping the USSR. The country of the regime and the barbwire, which is what this drawing symbolizes.",
+                "title2": "Penye fabric",
+                "title3": "Combination: 95% cotton, 5% spandex. Density 190 gm/m² The print is applied by machine embroidery"
+            }
+        ]
+    },
+    {
+        "id":2,
+        "category": "sweatshirts",
+        "rus":[
+            {
+                "id": 1,
+                "name": "Ультра Черный Свитшот",
+                "price": 38.14,
+                "image1": "https://cdn.jolybell.com/images/nWfZjCItxcSRSd5.png?width=641&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/Fd3qP1fgsG9bZ2U.webp?width=641&height=540&quality=90",
+                "image3": "https://cdn.jolybell.com/images/zwENxxmtBHtSgQ0.png?width=449&height=540&quality=90",
+                "image4": "https://cdn.jolybell.com/images/c2gbeh5hUIbofgT.png?width=407&height=540&quality=90",
+                "title1": "Лимитированная версия черного свитшота B.O.M.J Все еще контрбрендово, но только теплее. Согревает не любовь, а ткань.",
+                "title2": "В комплекте идут стикеры Игра в Кальмара. Колличество ограничено",
+                "title3": "Состав: 60% cotton, 40% polyester. Плотность 320 г/м²" 
+            },
+            {
+                "id": 2,
+                "name": "Кофта черная",
+                "price": 36.68,
+                "image1": "https://cdn.jolybell.com/images/qHFO0z5G1dmYxqP.webp?width=641&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/MBJWXCWscJ7diEv.png?width=641&height=540&quality=90",
+                "title1": "Англицизмы не пройдут.",
+                "title3": "Состав: 60% cotton, 40% polyester. Плотность 320 г/м²" 
+            },
+            {
+                "id": 3,
+                "name": "JOLY.DOG",
+                "price": 40.32,
+                "image1": "https://cdn.jolybell.com/images/Ujhs2tc6fUk3sXn.png?width=641&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/B1VCC0n6IqqpFkl.png?width=641&height=540&quality=90",
+                "title3": "Состав: 60% cotton, 40% polyester. Плотность 320 г/м²" 
+            },
+            {
+                "id": 4,
+                "name": "Кофта белая",
+                "price": 36.68,
+                "image1": "https://cdn.jolybell.com/images/Ujhs2tc6fUk3sXn.png?width=641&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/B1VCC0n6IqqpFkl.png?width=641&height=540&quality=90",
+                "title1": "Англицизмы не пройдут.",
+                "title3": "Состав: 60% cotton, 40% polyester. Плотность 320 г/м²" 
+            },
+            {
+                "id": 5,
+                "name": "JOLY.SHOT B.O.M.J Black",
+                "price": 36.91,
+                "image1": "https://cdn.jolybell.com/images/55qlqQNta3nmPHJ.png?width=642&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/7SbLZKVpKaF1luB.png?width=642&height=540&quality=90",
+                "title1": "Все еще контрбрендово, но только теплее. Согревает не любовь, а ткань.",
+                "title3": "Состав: 60% cotton, 40% polyester. Плотность 320 г/м²" 
+            },
+            {
+                "id": 6,
+                "name": "JOLY.SHOT Simple Black",
+                "price": 28.8,
+                "image1": "https://cdn.jolybell.com/images/J8kzH7lQRgquYOZ.png?width=642&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/KyYUcc6XinpIZMj.webp?width=642&height=540&quality=90",
+                "title1": "Просто черный. Ничего больше. По бокам в швах имеются скрытые карманы для телефона и прочих вещей.",
+                "title3": "Состав: 100% cotton. Плотность 220г/м² Данный свитшот без начеса, легче и тоньше других, которые с принтами" 
+            }
+        ],
+        "eng":[
+            {
+                "id": 1,
+                "name": "Ultra Black Sweatshirt",
+                "price": 38.14,
+                "image1": "https://cdn.jolybell.com/images/nWfZjCItxcSRSd5.png?width=641&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/Fd3qP1fgsG9bZ2U.webp?width=641&height=540&quality=90",
+                "image3": "https://cdn.jolybell.com/images/zwENxxmtBHtSgQ0.png?width=449&height=540&quality=90",
+                "image4": "https://cdn.jolybell.com/images/c2gbeh5hUIbofgT.png?width=407&height=540&quality=90",
+                "title1": "Limited Edition Black B.O.M.J Sweatshirt",
+                "title2": "Still counter-brand, but warmer. It's not love that warms, but the fabric.",
+                "title3": "Combination: 60% cotton, 40% polyester. Density 320 gm/m²" 
+            },
+            {
+                "id": 2,
+                "name": "Jacket black",
+                "price": 36.68,
+                "image1": "https://cdn.jolybell.com/images/qHFO0z5G1dmYxqP.webp?width=641&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/MBJWXCWscJ7diEv.png?width=641&height=540&quality=90",
+                "title1": "Anglicisms will not pass",
+                "title3": "Combination: 60% cotton, 40% polyester. Density 320 gm/m²" 
+            },
+            {
+                "id": 3,
+                "name": "JOLY.DOG",
+                "price": 40.32,
+                "image1": "https://cdn.jolybell.com/images/Ujhs2tc6fUk3sXn.png?width=641&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/B1VCC0n6IqqpFkl.png?width=641&height=540&quality=90",
+                "title3": "Combination: 60% cotton, 40% polyester. Density 320 gm/m²" 
+            },
+            {
+                "id": 4,
+                "name": "Jacket white",
+                "price": 36.68,
+                "image1": "https://cdn.jolybell.com/images/Ujhs2tc6fUk3sXn.png?width=641&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/B1VCC0n6IqqpFkl.png?width=641&height=540&quality=90",
+                "title1": "Anglicisms will not pass",
+                "title3": "Combination: 60% cotton, 40% polyester. Density 320 gm/m²" 
+            },
+            {
+                "id": 5,
+                "name": "JOLY.SHOT B.O.M.J Black",
+                "price": 36.91,
+                "image1": "https://cdn.jolybell.com/images/55qlqQNta3nmPHJ.png?width=642&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/7SbLZKVpKaF1luB.png?width=642&height=540&quality=90",
+                "title1": "Still counter-brand, but warmer. It's not love that warms, but the fabric.",
+                "title3": "Combination: 60% cotton, 40% polyester. Density 320 gm/m²" 
+            },
+            {
+                "id": 6,
+                "name": "JOLY.SHOT Simple Black",
+                "price": 28.8,
+                "image1": "https://cdn.jolybell.com/images/J8kzH7lQRgquYOZ.png?width=642&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/KyYUcc6XinpIZMj.webp?width=642&height=540&quality=90",
+                "title1": "Just black. Nothing more. There are hidden in-seam pockets on the sides for your phone and other stuff.",
+                "title3": "Combination: 100% cotton. Density 220gm/m² This sweatshirt has no fleece, lighter and thinner than others, which have prints" 
+            }
+        ]
+    },
+    {
+        "id":3,
+        "category": "hoodies",
+        "rus": [
+            {
+                "id": 1,
+                "name": "Черная кофта с капюшоном",
+                "price": 47.38,
+                "image1": "https://cdn.jolybell.com/images/xvrILhJWs8s6fXN.webp?width=549&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/O1dyjFYmuogxPs9.png?width=550&height=540&quality=90",
+                "title1": "Англицизмы не пройдут.",
+                "title2": "Принт нанесен методом шелкотрафаретной печати.",
+                "title3": "Состав: 60% cotton, 40% polyester. Плотность 320 г/м²" 
+            },
+            {
+                "id": 2,
+                "name": "Ультра Черное Худи",
+                "price": 49.12,
+                "image1": "https://cdn.jolybell.com/images/TxUcsqU1rtGPVxj.png?width=550&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/V3ts7kqirAqvfnf.png?width=550&height=540&quality=90",
+                "title1": "Лимитированная версия черного худи B.O.M.J Все еще контрбрендово, но только теплее. Согревает не любовь, а ткань.",
+                "title2": "Колличество ограничено",
+                "title3": "Состав: 60% cotton, 40% polyester. Плотность 320 г/м²" 
+            },
+            {
+                "id": 3,
+                "name": "Белая кофта с капюшоном",
+                "price": 47.38,
+                "image1": "https://cdn.jolybell.com/images/v37QqM380ZZgcD1.webp?width=549&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/nUpKpEIppFY82mz.png?width=549&height=540&quality=90",
+                "title1": "Лимитированная версия черного худи B.O.M.J Все еще контрбрендово, но только теплее. Согревает не любовь, а ткань.",
+                "title2": "Колличество ограничено",
+                "title3": "Состав: 60% cotton, 40% polyester. Плотность 320 г/м²" 
+            },
+            {
+                "id": 4,
+                "name": "Худи B.O.M.J Black",
+                "price": 47.93,
+                "image1": "https://cdn.jolybell.com/images/n1BQ3mrJaPlON2Z.webp?width=548&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/GwK5UaA9LUWMHHZ.png?width=549&height=540&quality=90",
+                "title1": "Все еще контрбрендово, но только теплее. Согревает не любовь, а ткань.",
+                "title3": "Состав: 60% cotton, 40% polyester. Плотность 320 г/м²" 
+            },
+            {
+                "id": 5,
+                "name": "Худи Marginal Black",
+                "price": 47.93,
+                "image1": "https://cdn.jolybell.com/images/EwBTpwiDkN2IKFQ.webp?width=548&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/XbJyJQ9hVDAIcPN.webp?width=549&height=540&quality=90",
+                "title1": "Все еще контрбрендово, но только теплее. Согревает не любовь, а ткань.",
+                "title3": "Состав: 60% cotton, 40% polyester. Плотность 320 г/м²" 
+            },
+            {
+                "id": 6,
+                "name": "Худи ZIP B.O.M.J Black",
+                "price": 55.5,
+                "image1": "https://cdn.jolybell.com/images/BXowq1JiqhdCUSE.png?width=434&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/RC3OIKCPvkjZFqk.webp?width=420&height=540&quality=90",
+                "title1": "Худи свободного кроя изготовлено из плотного, премиального качества трикотажа сорта пенье, с добавлением приятного начеса, с вышивкой. Внутренняя отделка из сетки. Модель с карманами, эластичными манжетами на рукавах и поясе дополнена застёжкой-молнией и капюшоном.",
+                "title3": "Состав 70% cotton, (внешняя часть) 30% polyester (начес, внутренняя)" 
+            }
+        ],
+        "eng": [
+            {
+                "id": 1,
+                "name": "Black Hoodie",
+                "price": 47.38,
+                "image1": "https://cdn.jolybell.com/images/xvrILhJWs8s6fXN.webp?width=549&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/O1dyjFYmuogxPs9.png?width=550&height=540&quality=90",
+                "title1": "Anglicisms will not pass",
+                "title3": "Combination: 60% cotton, 40% polyester. Density 320 gm/m²" 
+            },
+            {
+                "id": 2,
+                "name": "Ultra Black Hoodie",
+                "price": 49.12,
+                "image1": "https://cdn.jolybell.com/images/TxUcsqU1rtGPVxj.png?width=550&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/V3ts7kqirAqvfnf.png?width=550&height=540&quality=90",
+                "title1": "Limited Edition Black B.O.M.J Hoodie",
+                "title2": "Still counter-brand, but warmer. It's not love that warms, but the fabric.",
+                "title3": "Combination: 60% cotton, 40% polyester. Density 320 gm/m²" 
+            },
+            {
+                "id": 3,
+                "name": "White Hoodie",
+                "price": 47.38,
+                "image1": "https://cdn.jolybell.com/images/v37QqM380ZZgcD1.webp?width=549&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/nUpKpEIppFY82mz.png?width=549&height=540&quality=90",
+                "title1": "Anglicisms will not pass",
+                "title3": "Combination: 60% cotton, 40% polyester. Density 320 gm/m²" 
+            },
+            {
+                "id": 4,
+                "name": "Hoodie B.O.M.J Black",
+                "price": 47.93,
+                "image1": "https://cdn.jolybell.com/images/n1BQ3mrJaPlON2Z.webp?width=548&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/GwK5UaA9LUWMHHZ.png?width=549&height=540&quality=90",
+                "title1": "Still counter-brand, but warmer. It's not love that warms, but the fabric.",
+                "title3": "Combination: 60% cotton, 40% polyester. Density 320 gm/m²" 
+            },
+            {
+                "id": 5,
+                "name": "Hoodie Marginal Black",
+                "price": 47.93,
+                "image1": "https://cdn.jolybell.com/images/EwBTpwiDkN2IKFQ.webp?width=548&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/XbJyJQ9hVDAIcPN.webp?width=549&height=540&quality=90",
+                "title1": "Still counter-brand, but warmer. It's not love that warms, but the fabric.",
+                "title3": "Combination: 60% cotton, 40% polyester. Density 320 gm/m²" 
+            },
+            {
+                "id": 6,
+                "name": "Hoodie ZIP B.O.M.J Black",
+                "price": 55.5,
+                "image1": "https://cdn.jolybell.com/images/BXowq1JiqhdCUSE.png?width=434&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/RC3OIKCPvkjZFqk.webp?width=420&height=540&quality=90",
+                "title1": "Hoodie with a loose fit is made of dense, premium quality penye fabric knit, with the addition of a pleasant fleece and embroidery. Interior is made out of mesh. The item has pockets, elastic cuffs on the sleeves and waist, completed with a zipper and a hood.",
+                "title3": "Combination 70% cotton, (outer part) 30% polyester (fleece, interior)" 
+            }
+        ]
+    },
+    {
+        "id":4,
+        "name": "bags",
+        "rus": [
+            {
+                "id": 1,
+                "name": "JOLY.BAG PLUS BLACK",
+                "price": 91.3,
+                "image1": "https://cdn.jolybell.com/images/3jvxhtEgPL5GwBl.png?width=437&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/eyUQPMSKtC8GyPR.png?width=272&height=540&quality=90",
+                "title1": "Прочно. Удобно. Консерватизм. Запихни в меня все. Мне плевать какой диагонали твой ноутбук и сколько он весит. Пинаешь меня ногами либо лелеешь - я все равно всегда буду в своем первозданном виде, без ложной скромности - прочнее моей ткани только металл. Уверен, тебе приглянулся мой кармашек на лямке или потайной карман на спине, тебе показалось, что он удобен, но это не так - удобен весь я.",
+                "title2": "Основные характеристики:",
+                "li": "Непромокаемый материал (Через змейку вода может проникнуть).",
+                "li2": "Внутри спинки демпфирующие подушки, с вставками из изолона. Снаружи покрыты специальной сеткой.",
+                "li3": "Имеет карманы для 17” ноутбуков и планшетов.",
+                "li4": "Удобен в доступе к небольшим предметам через передний карман.",
+                "li5": "Есть скрытый карман на лямке и большой на спинке.",
+                "li6": "Множество отделений для личных принадлежностей.",
+                "title3": "Материал: Кордура. Вес: 800 грамм. Объем: 20 литров." 
+            },
+            {
+                "id": 2,
+                "name": "JOLY.BAG",
+                "price": 91.3,
+                "image1": "https://cdn.jolybell.com/images/1QRmhyynLUWvK1L.png?width=464&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/WPCEU3BZJBWGkW6.png?width=409&height=540&quality=90",
+                "title2": "Основные характеристики:",
+                "li": "Непромокаемый материал",
+                "li2": "Внутри спинки демпфирующие подушки, с вставками из изолона. Снаружи покрыты специальной сеткой.",
+                "li3": "Внутренние карманы для личных принадлежностей",
+                "li4": "Внутри карабин на застёжке для ключей",
+                "li5": "Боковые карманы на змейке",
+                "li6": "Большой скрытый карман в спине на основе велюра, так же скрытый карман в лямке.",
+                "title3": "Материал: Кордура. Вес: 750 грамм Объем: 24 литра." 
+            },
+            {
+                "id": 3,
+                "name": "JOLY.BAG Urban Plus 15.6",
+                "price": 91.3,
+                "image1": "https://cdn.jolybell.com/images/98E7wtFx3c2nWMA.webp?width=355&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/t41N4PO5owR7jF5.png?width=355&height=540&quality=90",
+                "title1": "Увеличенная версия рюкзака JOLY.BAG Urban:",
+                "title2": "Основные характеристики:",
+                "li": "Непромокаемый материал",
+                "li2": "Задняя часть из сетки",
+                "li3": "Карман для ноутбука 15.6”",
+                "li4": "Множество карманов для личных принадлежностей",
+                "li5": "Скрытый карман сзади в шве (для телефона, кошелька, паспорта)",
+                "li6": "Скрытый карман в лямке",
+                "title3": "Ткань Кордура (CORDURA). Вес рюкзака 625 грамм. Обьем 20 литров." 
+            }
+        ],
+        "eng": [
+            {
+                "id": 1,
+                "name": "JOLY.BAG PLUS BLACK",
+                "price": 91.3,
+                "image1": "https://cdn.jolybell.com/images/3jvxhtEgPL5GwBl.png?width=437&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/eyUQPMSKtC8GyPR.png?width=272&height=540&quality=90",
+                "title1": "Solid. Comfortable. Conservatism. Shove everything into me. I don't care what diagonal your laptop is and how much it weighs. Kicking me with legs or cherishing - both ways I'll always be in my original state, without fake humble - only metal is more solid than my fabric. I'm sure you liked my pocket on the shoulder strap or a secret pocket on the back, you think it's comfy, but it's not - it is the whole me, that is comfortable.",
+                "title2": "Main characteristics:",
+                "li": "Waterproof material (Water may penetrate through the zip).",
+                "li2": "Damping cushions inside of the back, with isolon inserts. The outside is covered with a special mesh.",
+                "li3": "Has pockets for 17” laptops and tablets.",
+                "li4": "Convenient when accessing small items through the front pocket.",
+                "li5": "There is a hidden pocket on the shoulder strap and a large one on the back.",
+                "li6": "Lots of compartments for personal items.",
+                "title3": "Fabric: Cordura. Weight: 800 grams. Capacity: 20 litres." 
+            },
+            {
+                "id": 2,
+                "name": "JOLY.BAG",
+                "price": 91.3,
+                "image1": "https://cdn.jolybell.com/images/1QRmhyynLUWvK1L.png?width=464&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/WPCEU3BZJBWGkW6.png?width=409&height=540&quality=90",
+                "title2": "Main characteristics:",
+                "li": "Waterproof material",
+                "li2": "Damping cushions inside the back, with isolon inserts. The outside is covered with a special mesh.",
+                "li3": "Has pockets for 17” laptops and tablets",
+                "li4": "Inside carabiner with key clasp",
+                "li5": "Zip side pockets",
+                "li6": "Adjustable shoulder straps, mesh back.",
+                "title3": "Fabric: Cordura. Weight: 750 grams Capacity: 24 litres." 
+            },
+            {
+                "id": 3,
+                "name": "JOLY.BAG Urban Plus 15.6",
+                "price": 91.3,
+                "image1": "https://cdn.jolybell.com/images/98E7wtFx3c2nWMA.webp?width=355&height=540&quality=90",
+                "image2": "https://cdn.jolybell.com/images/t41N4PO5owR7jF5.png?width=355&height=540&quality=90",
+                "title1": "The enlarged version of the JOLY.BAG Urban backpack",
+                "title2": "Main characteristics:",
+                "li": "Waterproof material",
+                "li2": "The back is made out of mesh",
+                "li3": "Pocket for a 15.6” laptop”",
+                "li4": "Lots of pockets for personal items",
+                "li5": "Hidden back in-seam pocket (for a phone, wallet, passport)",
+                "li6": "Hidden strap pocket",
+                "title3": "Cordura fabric (CORDURA). The weight of the backpack is 625 grams. Capacity 20 litres" 
+            }
+        ]
+    },
+    {
+        "id":5,
+        "name": "pants/shorts"
+    },
+    {
+        "id":6,
+        "name": "polo"
+    },
+    {
+        "id":7,
+        "name": "shirt"
+    },
+    {
+        "id":8,
+        "name": "pajamas"
+    },
+    {
+        "id":9,
+        "name": "hats"
+    },
+    {
+        "id":10,
+        "name": "caps"
+    },
+    {
+        "id":11,
+        "name": "underpants"
+    },
+    {
+        "id":12,
+        "name": "souvenirs"
+    },
+    {
+        "id":13,
+        "name": "memes"
+    }
+]

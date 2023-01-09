@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&display=swap');
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: 'Jost', sans-serif;
+}
+
+.App {
+  max-width: 1536px;
+  overflow-x: hidden;
+}

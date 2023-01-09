@@ -1,0 +1,14 @@
+
+.inp {
+    width: 30px;
+    height: 30px;
+    border-radius: 24px;
+    transition: all 1s;
+    padding-left: 10px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+}
+.inp:focus {
+    width: 30%;
+}

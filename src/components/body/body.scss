@@ -1,0 +1,42 @@
+img {
+    width: 100%;
+}
+.main-text {
+    width: 100%;
+    height: 140px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .phara {
+        text-transform: uppercase;
+        font-size:x-large;
+        font-weight: 600;
+        position: absolute;
+        animation: shake 6s infinite;
+        span {
+
+            padding: 9px 15px;
+            background-color: black;
+            color: white;
+            width: 104.5px;
+            height: 43.6px;
+            font-weight: 700;
+        }
+    }
+}
+@keyframes shake {
+    50% {
+        transform: translateX(100px);
+    }
+    70% {
+        transform: translateX(-100px);
+    }
+    90% {
+        transform: scale(1.1);
+    }
+    90% {
+        transform: 0;
+    }
+}
