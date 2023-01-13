@@ -2,7 +2,6 @@
     text-align: center;
     width: 200px;
     padding-right: 50px;
-    z-index: 999;
     p {
         padding-bottom: 25px;
         width: 100%;
@@ -27,8 +26,14 @@
             justify-content: center;
             align-items: center;
             cursor: pointer;
-            transition: 0.6s;
-            border-radius: 24px;
+            transition: 0.4s;
+            // border-radius: 24px;
+        }
+        .sort-item:first-child{
+            border-radius: 24px 24px 0 0;
+        }
+        .sort-item:last-child {
+            border-radius: 0 0 24px 24px;
         }
         .sort-item:hover {
             background-color: rgba(0, 0, 0, 0.4);

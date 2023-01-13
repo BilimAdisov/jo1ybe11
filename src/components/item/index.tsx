@@ -1,105 +1,88 @@
-import { useState } from 'react'
 import { ImArrowRight2 } from 'react-icons/im'
-import { ClothesSize } from '../popup/clothesSize'
+import uuid from 'react-uuid'
+import { sizeClothes } from '../../COMMON/moks'
+import { SwiperSlider } from '../swiper'
 import './item.scss'
 
-export const Item = () => {
+export const Item = ({state, IdItemPage, path, setClothesclose, setCareClose, chooseSize, setChooseSize,amount,setAmount }:any) => {
+       
 
-    const [ chooseSize, setChooseSize ] = useState('')
-    const [ amount, setAmount ] = useState(1)
-    console.log(amount);
+    const newItem = state.filter((obj:any) => (obj.id === IdItemPage))
     
-    console.log(chooseSize);
     
-    const sizeClothes = [
-        {
-            id: 1,
-            size: 'S'
-        },
-        {
-            id: 2,
-            size: 'M'
-        },
-        {
-            id: 3,
-            size: 'L'
-        },
-        {
-            id: 4,
-            size: 'XL'
-        },
-        {
-            id: 5,
-            size: '2XL'
-        },
-        {
-            id: 6,
-            size: '3XL'
-        },
-        {
-            id: 7,
-            size: '4XL'
-        },
-    ]
+    
 
   return (
     <>
-    <div className="item">
-            <h1>Item Name</h1>
-        <div className="item-container">
-            <div className="item-nav">
-                <div className="slider"></div>
-                <div className="item-info">
-                    <div className="price">
-                        <span className='cost'>35.19 USD</span>
+        {
+            newItem.map((elem:any) => (
+                <div className="item" key={elem.id}>
+                <h1>{elem.name}</h1>
+            <div className="item-container">
+                <div className="item-nav">
+                    <div className="slider">
+                        <SwiperSlider className='slideres' newItem={newItem}/>
                     </div>
-                    <div className="compound">
-                        <p>
-                            Традиционная черная вышиванка из приятной к телу ткани
-                             лакоста с вышитым орнаментом ромба на горловине,
-                              груди и рукавах. Модель свободного прямого кроя с 
-                              воротником-стойкой, вырезом со скрытыми застежками 
-                              на полке и длинными рукавами с манжетами на застежке.
-                        </p>
-                        <p>
-                            Вышиванка идеально сочетается как с брюками, 
-                            так и с джинсами любого цвета, она дополнит ваш обычный образ.
-                        </p>
-                        <p>
-                            Состав ткани 100% хлопок.
-                        </p>
-                    </div>
-                    <div className="more-info">
-                        <button className='how'>РАЗМЕРНАЯ СЕТКА</button>
-                        <button className='how'>УХОД ЗА ВЕЩЬЮ</button>
-                    </div>
-                    <div className="select-size">
-                        <h5>Выберите размер:</h5>
-                        <div className="size">
-                            {
-                                sizeClothes.map(elem => (
-                                    <button key={elem.id} onClick={() => (setChooseSize(elem.size))}>{elem.size}</button>
-                                ))
-                            }
+                    <div className="item-info">
+                        <div className="price">
+                            <span className='cost'>{elem.price} USD</span>
                         </div>
-                    </div>
-                    <div className="buy">
-                        <div className="amount">
-                            <h5>Количество:</h5>
-                            <div className="counter">
-                                <button className='minus' onClick={() => (setAmount(amount-1))}>---</button>
-                                <input type="button" value={amount} className='result'/>
-                                <button className='plus' onClick={() => (setAmount(amount+1))}>+</button>
+                        <div className="compound">
+                            <p>
+                                {elem.title1}
+                            </p>
+                            
+                            
+                            <p>
+                                {elem.title2}
+                            </p>
+                              {
+                                path === '/bags' ?   <ul className='bags-listes'>
+                                    <li className='bags-list'>{elem.li}</li>
+                                    <li className='bags-list'>{elem.li2}</li>
+                                    <li className='bags-list'>{elem.li3}</li>
+                                    <li className='bags-list'>{elem.li4}</li>
+                                    <li className='bags-list'>{elem.li5}</li>
+                                    <li className='bags-list'>{elem.li6}</li>
+                                </ul> : ''
+                              }
+                            <p>
+                                {elem.title3}
+                            </p>
+                        </div>
+                        <div className="more-info">
+                            <button className='how' onClick={() => setClothesclose(true)}>РАЗМЕРНАЯ СЕТКА</button>
+                            <button className='how' onClick={() => setCareClose(true)}>УХОД ЗА ВЕЩЬЮ</button>
+                        </div>
+                        <div className="select-size">
+                            <h5>Выберите размер:</h5>
+                            <div className="size">
+                                {
+                                    sizeClothes.map(elem => (
+                                        <button className={chooseSize === elem.size ? 'active' : ''} key={elem.id} onClick={() => (setChooseSize(elem.size))}>{elem.size}</button>
+                                    ))
+                                }
                             </div>
                         </div>
-                        <div className="add-cart">
-                            <button className='btn'>Добавить в Корзину <ImArrowRight2 className='on-right'/></button>
+                        <div className="buy">
+                            <div className="amount">
+                                <h5>Количество:</h5>
+                                <div className="counter">
+                                    <button className='minus' onClick={() => (amount === 1 ? '' : setAmount(amount-1))}>---</button>
+                                    <input type="button" value={amount} className='result'/>
+                                    <button className='plus' onClick={() => (setAmount(amount+1))}>+</button>
+                                </div>
+                            </div>
+                            <div className="add-cart">
+                                <button className='btn' >Добавить в Корзину <ImArrowRight2 className='on-right'/></button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+            ))
+        }
     </>
   )
 }

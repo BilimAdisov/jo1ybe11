@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import  { FC } from 'react'
 import { BiUser,BiCart } from 'react-icons/bi'
 import { IPropsHeader } from '../../COMMON/types/header/intex'
 import { useNavigate } from 'react-router-dom'
@@ -6,7 +6,7 @@ import { categoryMenu } from '../../COMMON/moks'
 import './header.scss'
 import Logo from '../../assets/image/logo.svg'
 
-export const Header:FC<IPropsHeader> = ({toggleDrawer, setPath}:IPropsHeader):JSX.Element => {
+export const Header:FC<any> = ({toggleDrawer, setPath, setPaginatNone}:any):JSX.Element => {
 
 
     const navigate = useNavigate()
@@ -17,7 +17,7 @@ export const Header:FC<IPropsHeader> = ({toggleDrawer, setPath}:IPropsHeader):JS
         <div className="logo">
             <div className="logo-container">
                 <div className="header-leftstrip"></div>
-                    <img src={Logo} alt="img alt" onClick={() => navigate('/')}/>
+                    <img src={Logo} alt="img alt" onClick={() => (navigate('/'),setPaginatNone(false))}/>
                 <div className="header-rightstrip"></div>
             </div>
         </div>
@@ -28,7 +28,7 @@ export const Header:FC<IPropsHeader> = ({toggleDrawer, setPath}:IPropsHeader):JS
                             {
                                 categoryMenu.map(obj => <li key={obj.id}>
                                     <a onClick={() => (
-                                        navigate(`${obj.path}`), setPath(`${obj.path}`)
+                                        navigate(`${obj.path}`), setPath(`${obj.path}`),setPaginatNone(true)
                                     )}>{obj.rus}</a>
                                 </li>)
                             }
@@ -44,13 +44,13 @@ export const Header:FC<IPropsHeader> = ({toggleDrawer, setPath}:IPropsHeader):JS
             <div className="under-list">
                 <ul>
                     <li>
-                        <a href="/">РУС</a>
+                        <a href="#">РУС</a>
                     </li>
                     <li>
-                        <a href="/">USD</a>
+                        <a href="#">USD</a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a href="#">
                             <BiUser className='user-icon'/>
                         </a>
                     </li>

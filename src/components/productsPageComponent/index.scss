@@ -1,17 +1,4 @@
-.function-products {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 20px;
-    padding: 20px 0;
-    background-color: black;
-    .fc-prod {
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-    }
-}
+
 h1 {
     text-align: center;
     padding: 25px 0 0 0;
@@ -21,13 +8,29 @@ h1 {
     min-height: 300px;
     display: flex;
     justify-content: center;
-    padding-left: 100px;
+    padding-left: 0px;
     margin: 100px 0;
+    .loader {
+        width: 500px;
+        height: 100%;
+        transition: all 1s;
+        background: local;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .load-title {
+            height: 100%;
+            transition: all 1s;
+            color: black;
+        }
+    }
     .products-wrapper {
         max-width: 100%;
         height: auto;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         gap: 30px;
         .items {
             width: 411.882px;
@@ -38,7 +41,7 @@ h1 {
             cursor: pointer;
             a:hover {
                 .item-container {
-                    background-color:rgba(0,0,0,.3);
+                    background-color:rgba(0,0,0,0.6);
                     .btn-none {
                         z-index: 1;
                     }
@@ -167,20 +170,5 @@ h1 {
                 }
             }
         }
-    }
-}
-
-.loader {
-    width: 100%;
-    height: 100%;
-    transition: all 1s;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .load-title {
-        height: 100%;
-        transition: all 1s;
-        color: white;
     }
 }

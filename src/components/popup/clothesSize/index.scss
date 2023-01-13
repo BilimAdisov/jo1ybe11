@@ -1,20 +1,29 @@
 .modal {
     width: 100%;
-    height: 100%;
+    height: 200%;
     background-color: rgba(0, 0, 0, 0.4);
     position: absolute;
     top: 0;
     left: 0;
+    text-align: center;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .modal-size {
         width: calc(100% - 1000px);
         display: flex;
         justify-content: center;
         align-items: center;
         z-index: 500;
-        background-color: red;
+        background-color: white;
         padding: 50px;
         border-radius: 28px;
         .modal-wrapper {
+            .close {
+                padding-left: 500px;
+                cursor: pointer;
+            }
             .title {
                 display: flex;
                 flex-direction: column;
