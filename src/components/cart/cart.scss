@@ -1,5 +1,10 @@
 .cart {
-    height: auto;
+    min-height: 100vh;
+    z-index: 999;
+    vertical-align: initial;
+    pointer-events: visible;
+    overflow-x: hidden;
+    overflow-y: scroll;
     .cart-wrapper {
         display: flex;
         flex-direction: column;
@@ -25,6 +30,8 @@
             min-height: 100px;
             border-bottom: 2px solid black;
             margin: 0;
+            display: flex;
+            flex-direction: column;
             .if-none {
                 width: 380px;
                 height: 107px;
@@ -33,12 +40,140 @@
                 align-items: center;
                 gap: 30px;
                 box-sizing: border-box;
+                margin-bottom: 20px;
                 h1 {
                     font-size: 38px;
                     font-weight: 400;
                     line-height: 108px;
                     color: black;
                     letter-spacing: 1px;
+                }
+            }
+            .things {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 20px;
+                .image {
+                    width: 96px;
+                    height: 120px;
+                    border: 1px solid #e2e7ec;
+                    border-radius: 10px;
+                    padding: 11px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    img {
+                        width: 100%;
+                        height: auto;
+                        cursor: pointer;
+                        transition: all 0.3s;
+                    }
+                    img:hover {
+                       opacity: 75%;
+                    }
+                    .delete-things {
+                        width: 23px;
+                        height: 23px;
+                        border: 1px solid #818d92;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 999px;
+                        position: absolute;
+                        left: -10px;
+                        top: -10px;
+                        background-color: white;
+                        cursor: pointer;
+                    }
+                }
+                .things-info {
+                    display: flex;
+                    flex-direction: column;
+                    h4 {
+                        font-size: 16px;
+                        font-weight: 500;
+                        margin: 10px 0 8px;
+                        transition: 0.3s;
+                        cursor: pointer;
+                    }
+                    h4:hover {
+                        opacity: 75%;
+                    }
+                    p {
+                        color: #818d92;
+                        font-size: 16px;
+                        font-weight: 300;
+                        letter-spacing: 1px;
+                        line-height: 1.2;
+                    }
+                    .things-size {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 7px;
+                        button {
+                            border: none;
+                            background: local;
+                            cursor: pointer;
+                            transition: 0.3s;
+                        }
+                        button:hover {
+                            opacity: 75%;
+                        }
+                        .active-btn {
+                            font-weight: 600;
+                            position: relative;
+                            margin: 5px;
+                        }
+                        .active-btn::after {
+                            content: '';
+                            width: 0.5px;
+                            height: 15px;
+                            background-color: #818d92;
+                            margin-left: 5px;
+                            position: absolute;
+                            top: 2px;
+                            right: -5px;
+                        }
+                        .active-btn::before {
+                            content: '';
+                            width: 0.5px;
+                            height: 15px;
+                            background-color: #818d92;
+                            margin-right: 5px;
+                            position: absolute;
+                            top: 2px;
+                            left: -5px;
+                        }
+                    }
+                    .things-amount {
+                        padding-left: 15px;
+                        input {
+                            height: min-content;
+                            border: none;
+                            background:local;
+                            font-size: 15px;
+                            font-weight: 400;
+                            padding-right: 12px;
+                            border-right: 1px solid #818d92;
+                        }
+                        button {
+                            border: none;
+                            background: local;
+                            padding-left: 12px;
+                            transition: 0.3s;
+                            margin: 0 5px;
+                            cursor: pointer;
+                        }
+                        button:hover {
+                            opacity: 75%;
+                            transform: scale(1.2);
+                        }
+                    }
+                    .things-coast {
+                        text-align: end;
+                    }
                 }
             }
             .if-none::after {

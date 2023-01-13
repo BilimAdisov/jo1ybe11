@@ -1,9 +1,12 @@
 import {MdArrowBackIosNew} from 'react-icons/md'
 import { FC } from 'react'
+import {GrClose} from 'react-icons/gr'
 import './cart.scss'
-import { IPropsCart } from '../../COMMON/types/cart'
+import { sizeClothes } from '../../COMMON/moks'
 
-export const Cart:FC<IPropsCart> = ({toggleDrawer}:IPropsCart):JSX.Element => {
+export const Cart:FC<any> = ({toggleDrawer, amount, setAmount, chooseSize, setChooseSize }:any):JSX.Element => {
+
+  // orderItem.map((elem:any) => console.log(elem))
 
   return (
     <>
@@ -13,6 +16,32 @@ export const Cart:FC<IPropsCart> = ({toggleDrawer}:IPropsCart):JSX.Element => {
         <div className="products">
             <div className="if-none">
               <h1>Мои покупки</h1>
+            </div>
+            <div className="things">
+              <div className="image">
+                <img src="https://cdn.jolybell.com/images/rjM38ixualwwCmQ.webp?width=566&height=540&quality=90" alt="" />
+                <span className='delete-things'>
+                  <GrClose size={10} className='delete-btn'/>
+                </span>
+              </div>
+              <div className="things-info">
+                <h4>Вышиванка Ромб</h4>
+                <p>размер:</p>
+                <div className="things-size">
+                  {
+                    sizeClothes.map((elem:any) => (
+                      <button className={chooseSize === elem.size ? 'active-btn' : ''} key={elem.id} onClick={() => setChooseSize(elem.size)}>{elem.size}</button>
+                    ))
+                  }
+                </div>
+                <p>количество:</p>
+                <div className="things-amount">
+                  <input type="button" value={amount}/>
+                  <button onClick={() => (setAmount(amount+1))}>+</button>
+                  <button onClick={() => (amount === 1 ? '' : setAmount(amount-1))}>---</button>
+                </div>
+                <span className='things-coast'>70.38 USD</span>
+              </div>
             </div>
         </div>
         <div className="promocode">

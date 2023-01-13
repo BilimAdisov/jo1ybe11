@@ -21,6 +21,10 @@ import { MemesComponent } from './components/productsPageComponent/memes';
 import 'react-modern-drawer/dist/index.css'
 import './App.css';
 import { PaginationFcComponent } from './components/pagination';
+import { ClothesSize } from './components/popup/clothesSize';
+import { CareThings } from './components/popup/careBythings';
+import { SearchFCComponent } from './components/seach';
+import { SorfFCComponent } from './components/sort';
 
 
 function App() {
@@ -29,8 +33,15 @@ function App() {
   const orderBy = sortProperty.includes('-') ? 'asc' : 'desc'
   const sortBy = sortProperty.replace('-', '')  
   
+  //search
+  const [value, setValue ] = useState('')
+  const [activeSearch, setActiveSearch ] = useState(false)
   
+  const searchRequest = value ? `&search=${value}` : ''
 
+  // const finall = activeSearch === true ? searchRequest : ''
+
+  
   //pagination
   const [load, setLoad ] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
@@ -38,8 +49,6 @@ function App() {
   
   //navigate
   const [path, setPath] = useState(``)
-  path.replace(`/`,``)
-  console.log(path);
   
   
   //API
@@ -50,13 +59,14 @@ function App() {
   useEffect(() => {
       async function FetchData() {
         setLoad(true)
-        await axios.get(`${URL}/${path}?sortBy=${sortBy}&order=${orderBy}`)
+        await axios.get(`${URL}${path}?sortBy=${sortBy}&order=${orderBy}${searchRequest}`)
         .then(res => setState(res.data))
         .catch(err => console.error(err))
         setLoad(false)
+        // setActiveSearch(false)
       }
       FetchData()
-    }, [path, sortBy, orderBy])
+    }, [path, sortBy, orderBy,searchRequest])
     
     const [isOpen, setIsOpen] = useState(false)
     const toggleDrawer = () => {
@@ -69,19 +79,81 @@ function App() {
     const currentItem = state.slice(firstItemIndex, lastItemIndex)
 
     const paginate = (pageNumber:any) => setCurrentPage(pageNumber)
+    // const itemID = state.map((elem:any) => elem.id)
 
-    const itemID = state.map((elem:any) => elem.id)
+    //item page enter
+    const [IdItemPage, setIdItemPage] = useState(null)
     
+    //pagination none
+    const [ paginateNone, setPaginatNone ] = useState(false)
      
+    //modal windows
+    const [clothesClose, setClothesclose] = useState(false)
+    const [careClose, setCareClose ] = useState(false)
+
+    //order
+    const [ chooseSize, setChooseSize ] = useState('S')
+    const [ amount, setAmount ] = useState(1)
+    const [ cartAmount, setCartAmount ] = useState(amount)
+
+
     return (
       <>
-      <Header toggleDrawer={toggleDrawer} setPath={setPath}/>
+      <Header toggleDrawer={toggleDrawer} setPath={setPath} setPaginatNone={setPaginatNone}/>
+      {
+        paginateNone === true ?  <div className="function-products">
+        <div className="fc-prod">
+            <SearchFCComponent value={value} setValue={setValue} setActiveSearch={setActiveSearch}/>
+            <SorfFCComponent setSortProperty={setSortProperty}/>
+        </div>
+      </div> : ''
+      }
       <Routes>
-        <Route path='/t-shirts' element={<TShirtComponent state={currentItem} load={load} setSortProperty={setSortProperty}/>}/>
-        <Route path='/bags' element={<BagComponent state={currentItem} load={load} setSortProperty={setSortProperty}/> }/>
-        <Route path='/hoodies' element={<HoodieComponent state={currentItem} load={load} setSortProperty={setSortProperty}/>}/>
-        <Route path='/sweatshirts' element={<SweatshirtComponent state={currentItem} load={load} setSortProperty={setSortProperty}/>}/>
-        <Route path='/1' element={<Item/>}/>
+        <Route path={`${path}/${IdItemPage}`} element={<Item 
+        state={state} 
+        IdItemPage={IdItemPage} path={path} 
+        setClothesclose={setClothesclose} 
+        setCareClose={setCareClose} 
+        chooseSize={chooseSize} 
+        setChooseSize={setChooseSize}
+        amount={amount}
+        setAmount={setAmount}
+        value={value}
+        setValue={setValue}
+        />}/>
+        <Route path='/t-shirts' element={<TShirtComponent 
+        state={currentItem} 
+        load={load} 
+        setIdItemPage={setIdItemPage} 
+        setPaginatNone={setPaginatNone}
+        />}/>
+        <Route path='/bags' element={<BagComponent 
+        state={currentItem} 
+        load={load} 
+        setSortProperty={setSortProperty} 
+        setIdItemPage={setIdItemPage} 
+        setPaginatNone={setPaginatNone}
+        value={value}
+        setValue={setValue}
+        /> }/>
+        <Route path='/hoodies' element={<HoodieComponent 
+        state={currentItem} 
+        load={load} 
+        setSortProperty={setSortProperty} 
+        setIdItemPage={setIdItemPage} 
+        setPaginatNone={setPaginatNone}
+        value={value}
+        setValue={setValue}
+        />}/>
+        <Route path='/sweatshirts' element={<SweatshirtComponent 
+        state={currentItem} 
+        load={load} 
+        setSortProperty={setSortProperty} 
+        setIdItemPage={setIdItemPage} 
+        setPaginatNone={setPaginatNone}
+        value={value}
+        setValue={setValue}
+        />}/>
         <Route path='/' element={<Body/>}/>
         <Route path='/register' element={<AuthRootComponents/>}/>
         <Route path='/login' element={<AuthRootComponents/>}/>
@@ -93,14 +165,22 @@ function App() {
         <Route path='/memes' element={<MemesComponent/>}/>
       </Routes>
       {
-        itemID.length >= 5  ? <PaginationFcComponent itemPerPage={itemPerPage} totalItem={state.length} paginate={paginate}/> : ''
+         paginateNone === true && load === false ? <PaginationFcComponent itemPerPage={itemPerPage} totalItem={state.length} paginate={paginate}/> : ''
       }
-      <Footer setPath={setPath}/>
-      <Drawer open={isOpen} onClose={toggleDrawer} direction='right' className='drawer' size={380}>
-        <Cart toggleDrawer={toggleDrawer}/>
+      <Footer setPath={setPath} setPaginatNone={setPaginatNone}/>
+      <Drawer style={{width: '380px',height: '200%', pointerEvents: 'none'}} open={isOpen} onClose={toggleDrawer} direction='right' >
+        <Cart toggleDrawer={toggleDrawer} chooseSize={chooseSize} setChooseSize={setChooseSize} amount={amount} setAmount={setAmount} />
       </Drawer>
+      {
+        clothesClose === true ? <ClothesSize setClothesclose={setClothesclose} clothesClose={clothesClose}/> : ''
+      }
+      {
+        careClose === true ? <CareThings setCareClose={setCareClose}/> : ''
+      }
     </>
   );
+
+
 }
 
 export default App;

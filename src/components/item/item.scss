@@ -1,9 +1,8 @@
 .item {
     width: 100%;
-    height: 1145px;
-    padding: 50px 0 155px 0;
+    max-height: 1400px;
+    padding: 50px 0 120px 0;
     background-color: #ebe6e8;
-    text-align: center;
     h1 {
         margin-bottom: 80px;
     }
@@ -12,15 +11,19 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
+            align-items: center;
             .slider {
-                width: 705.04px;
-                height: 540px;
-                background-color: black;
+                max-width: 705px;
+                max-height: 540px;
+                background: none;
+                display: inline-block;
             }
             .item-info {
-                width: 601.34px;
-                height: 584px;
-                position: relative;
+                width: 40%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
                 .price {
                     .cost {
                         z-index: 2;
@@ -34,45 +37,10 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        position: absolute;
-                        top: 0px;
-                        left: 0px;
-                    }
-                    .sale {
-                        z-index: 1;
-                        width: 200px;
-                        height: 50px;
-                        background-color: white;
-                        border-radius: 0 100px 100px 0;
-                        font-size: 24px;
-                        font-weight: 600;
-                        color: #646f75;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        position: absolute;
-                        top: 0px;
-                        left: 150px;
-                    }
-                    .discont {
-                        position: absolute;
-                        top: 10px;
-                        left: 420px;
-                        color: white;
-                        z-index: 10;
-                        transform: rotate(25deg);
-                    }
-                    .coupon {
-                        width: 65px;
-                        position: absolute;
-                        top: -10px;
-                        left: 400px;
-                        transform: rotate(225deg);
                     }
                 }
                 .compound {
-                    position: absolute;
-                    top: 75px;
+
                     p {
                         width: 602px;
                         text-align: left;
@@ -82,13 +50,22 @@
                         letter-spacing: 1px;
                         margin-bottom: 25px;
                     }
+                    .bags-listes {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        .bags-list {
+                            list-style-type: disc;
+                            font-size: 18px;
+                            color: #484450;
+                            letter-spacing: 0.8px;
+                        }
+                    }
                 }
                 .more-info {
-                    position: absolute;
                     display: flex;
                     flex-wrap: wrap;
                     gap: 20px;
-                    top: 325px;
                     .how {
                         font-size: 13px;
                         letter-spacing: 1px;
@@ -106,8 +83,6 @@
                     }
                 }
                 .select-size {
-                    position: absolute;
-                    top: 400px;
                     text-align: start;
                     h5 {
                         font-size: 16px;
@@ -134,16 +109,25 @@
                             transition: all 0.5s;
                             border: none;
                         }
-                        button:focus {
+                        .active {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 38px;
+                            height: 38px;
+                            margin: 4px;
+                            cursor: pointer;
                             background-color: black;
+                            border-radius: 999px;
+                            font-size: 18px;
                             color: white;
-                            font-weight: 600;
+                            font-weight: 400;
+                            transition: all 0.5s;
+                            border: none;
                         }
                     }
                 }
                 .buy {
-                    position: absolute;
-                    top: 490px;
                     display: flex;
                     flex-wrap: wrap;
                     gap: 30px;

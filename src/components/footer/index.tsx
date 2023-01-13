@@ -5,7 +5,7 @@ import { SlSocialVkontakte } from 'react-icons/sl'
 import { categoryMenu } from '../../COMMON/moks'
 import { useNavigate } from 'react-router-dom'
 
-export const Footer = ({setPath}:any) => {
+export const Footer = ({setPath,setPaginatNone}:any) => {
 
     const navigate = useNavigate()
 
@@ -17,8 +17,10 @@ export const Footer = ({setPath}:any) => {
                 <ul>
                     {
                         categoryMenu.map(obj => <li key={obj.id}>
-                                <a onClick={() => (navigate(`${obj.path}`), setPath(`${obj.path}`))}>{obj.rus}</a>
-                            </li>)
+                            <a onClick={() => (
+                                navigate(`${obj.path}`), setPath(`${obj.path}`),setPaginatNone(true)
+                            )}>{obj.rus}</a>
+                        </li>)
                     }
                     <li>
                         <a href="#">FAQ</a>
