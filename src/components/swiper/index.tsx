@@ -18,7 +18,7 @@ export const SwiperSlider = ({newItem}:any) => {
             pagination={{ clickable: true }}
             onSwiper={(swiper) => ''}
             onSlideChange={() => ''}
-            style={{textAlign: 'center', maxHeight: '540px', maxWidth: '705px'}}
+            style={{textAlign: 'center'}}
             key={elem.id}
             >
                 <SwiperSlide>

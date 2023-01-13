@@ -1,5 +1,4 @@
 import { FC, useState } from 'react'
-import './index.scss'
 import { sortrus } from '../../COMMON/moks'
 
 export const SorfFCComponent:FC<any> = ({setSortProperty}:any):JSX.Element => {

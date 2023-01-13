@@ -1,6 +1,6 @@
 .item {
     width: 100%;
-    max-height: 1400px;
+    max-height: auto;
     padding: 50px 0 120px 0;
     background-color: #ebe6e8;
     h1 {
@@ -12,11 +12,22 @@
             flex-wrap: wrap;
             justify-content: space-evenly;
             align-items: center;
+            @include breakpoint(lx) {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                gap: 50px;
+            }
             .slider {
                 max-width: 705px;
                 max-height: 540px;
-                background: none;
-                display: inline-block;
+                background: local;
+                // display: inline-block;
+                @include breakpoint(lx) {
+                    width: 80%;
+                    height: auto;
+                    position: relative;
+                }
             }
             .item-info {
                 width: 40%;
@@ -24,9 +35,13 @@
                 display: flex;
                 flex-direction: column;
                 gap: 30px;
+                @include breakpoint(lx) {
+                    display: flex;
+                    align-items: center;
+                    width: 85%;
+                }
                 .price {
                     .cost {
-                        z-index: 2;
                         width: 180px;
                         height: 50px;
                         background-color: black;
@@ -40,15 +55,22 @@
                     }
                 }
                 .compound {
-
-                    p {
-                        width: 602px;
+                    @include breakpoint(lx) {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    .pharagraf {
+                        max-width: 602px;
                         text-align: left;
                         color: #484450;
                         font-size: 17px;
                         font-weight: 400;
                         letter-spacing: 1px;
                         margin-bottom: 25px;
+                        @include breakpoint(lx) {
+                            text-align: center;
+                        }
                     }
                     .bags-listes {
                         display: flex;
@@ -66,6 +88,9 @@
                     display: flex;
                     flex-wrap: wrap;
                     gap: 20px;
+                    @include breakpoint(lx) {
+                        justify-content: center;
+                    }
                     .how {
                         font-size: 13px;
                         letter-spacing: 1px;
@@ -84,6 +109,9 @@
                 }
                 .select-size {
                     text-align: start;
+                    @include breakpoint(lx) {
+                        text-align: center;
+                    }
                     h5 {
                         font-size: 16px;
                         font-weight: 400;
@@ -131,8 +159,14 @@
                     display: flex;
                     flex-wrap: wrap;
                     gap: 30px;
+                    @include breakpoint(lx) {
+                        justify-content: center;
+                    }
                     .amount {
                         h5 {
+                            @include breakpoint(lx) {
+                                text-align: center;
+                            }
                             text-align: left;
                             font-size: 16px;
                             font-weight: 400;

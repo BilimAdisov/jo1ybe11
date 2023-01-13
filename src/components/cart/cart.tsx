@@ -1,7 +1,6 @@
 import {MdArrowBackIosNew} from 'react-icons/md'
 import { FC } from 'react'
 import {GrClose} from 'react-icons/gr'
-import './cart.scss'
 import { sizeClothes } from '../../COMMON/moks'
 
 export const Cart:FC<any> = ({toggleDrawer, amount, setAmount, chooseSize, setChooseSize }:any):JSX.Element => {

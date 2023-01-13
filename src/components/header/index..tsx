@@ -1,12 +1,11 @@
 import  { FC } from 'react'
 import { BiUser,BiCart } from 'react-icons/bi'
-import { IPropsHeader } from '../../COMMON/types/header/intex'
 import { useNavigate } from 'react-router-dom'
 import { categoryMenu } from '../../COMMON/moks'
-import './header.scss'
+import { GiHamburgerMenu } from 'react-icons/gi'
 import Logo from '../../assets/image/logo.svg'
 
-export const Header:FC<any> = ({toggleDrawer, setPath, setPaginatNone}:any):JSX.Element => {
+export const Header:FC<any> = ({toggleDrawer, setPath, setPaginatNone, setCurrentPage, toggleDrawer2 }:any):JSX.Element => {
 
 
     const navigate = useNavigate()
@@ -17,7 +16,7 @@ export const Header:FC<any> = ({toggleDrawer, setPath, setPaginatNone}:any):JSX.
         <div className="logo">
             <div className="logo-container">
                 <div className="header-leftstrip"></div>
-                    <img src={Logo} alt="img alt" onClick={() => (navigate('/'),setPaginatNone(false))}/>
+                    <img src={Logo} alt="img alt" onClick={() => (navigate('/'),setPaginatNone(false),setCurrentPage(1))}/>
                 <div className="header-rightstrip"></div>
             </div>
         </div>
@@ -28,15 +27,15 @@ export const Header:FC<any> = ({toggleDrawer, setPath, setPaginatNone}:any):JSX.
                             {
                                 categoryMenu.map(obj => <li key={obj.id}>
                                     <a onClick={() => (
-                                        navigate(`${obj.path}`), setPath(`${obj.path}`),setPaginatNone(true)
+                                        navigate(`${obj.path}`), setPath(`${obj.path}`),setPaginatNone(true),setCurrentPage(1)
                                     )}>{obj.rus}</a>
                                 </li>)
                             }
                             <li>
-                                <a href="#">FAQ</a>
+                                <a >FAQ</a>
                             </li>
                             <li>
-                                <a href="#">Ваш заказ</a>
+                                <a >Ваш заказ</a>
                             </li>
                     </ul>
                 </div>
@@ -44,18 +43,18 @@ export const Header:FC<any> = ({toggleDrawer, setPath, setPaginatNone}:any):JSX.
             <div className="under-list">
                 <ul>
                     <li>
-                        <a href="#">РУС</a>
+                        <a >РУС</a>
                     </li>
                     <li>
-                        <a href="#">USD</a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <BiUser className='user-icon'/>
+                        <a >
+                            <BiUser className='user-icon' size={20}/>
                         </a>
                     </li>
                     <li>
-                        <a onClick={() => toggleDrawer(true)}> <BiCart className='cart-icon' /> 0 USD</a>
+                        <a onClick={() => toggleDrawer(true)}> <BiCart className='cart-icon'/> 0 USD</a>
+                    </li>
+                    <li>
+                        <GiHamburgerMenu color='white' size={30} className='burger' onClick={() => toggleDrawer2(true)}/>
                     </li>
                 </ul>
             </div>

@@ -1,6 +1,3 @@
-import React from 'react'
-import { ClothesSize } from '../popup/clothesSize'
-import './body.scss'
 
 export const Body = () => {
   return (

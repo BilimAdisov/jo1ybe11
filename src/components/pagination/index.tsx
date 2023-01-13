@@ -1,5 +1,4 @@
 import React, { FC } from 'react'
-import './index.scss'
 
 export const PaginationFcComponent:FC<any> = ({ itemPerPage, totalItem, paginate }:any):JSX.Element => {
     const pageNumber = []

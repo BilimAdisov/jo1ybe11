@@ -1,6 +1,6 @@
 .modal {
     width: 100%;
-    height: 200%;
+    height: 250%;
     background-color: rgba(0, 0, 0, 0.4);
     position: absolute;
     top: 0;
@@ -10,8 +10,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    .modal-size {
-        width: calc(100% - 1000px);
+    @include breakpoint(lx) {
+        height: 350%;
+    }
+    .modal-clothes {
+        width: 45%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -19,7 +22,13 @@
         background-color: white;
         padding: 50px;
         border-radius: 28px;
-        .modal-wrapper {
+        @include breakpoint(lx) {
+            width: 60%;
+        }
+        @include breakpoint(lm) {
+            width: 80%;
+        }
+        .modal-content {
             .close {
                 padding-left: 500px;
                 cursor: pointer;

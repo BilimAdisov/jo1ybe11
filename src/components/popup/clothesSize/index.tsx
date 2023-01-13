@@ -1,13 +1,12 @@
 import {GrClose} from 'react-icons/gr'
-import './index.scss'
 
 export const ClothesSize = ({setClothesclose, clothesClose }:any) => {
 
   return (
     <>
     <div className={clothesClose ? 'modal active' : 'modal'} onClick={() => setClothesclose(false)}>
-      <div className='modal-size' onClick={e => e.stopPropagation()}>
-        <div className="modal-wrapper">
+      <div className='modal-clothes' onClick={e => e.stopPropagation()}>
+        <div className="modal-content">
           <GrClose className='close' size={20} onClick={() => setClothesclose(false)}/>
           <div className="title">
             <p>Как правильно выбрать размер</p>

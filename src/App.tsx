@@ -18,13 +18,14 @@ import { PajamsComponent } from './components/productsPageComponent/pajams';
 import { HatsComponent } from './components/productsPageComponent/hats';
 import { CapsComponent } from './components/productsPageComponent/caps';
 import { MemesComponent } from './components/productsPageComponent/memes';
-import 'react-modern-drawer/dist/index.css'
-import './App.css';
 import { PaginationFcComponent } from './components/pagination';
 import { ClothesSize } from './components/popup/clothesSize';
 import { CareThings } from './components/popup/careBythings';
 import { SearchFCComponent } from './components/seach';
 import { SorfFCComponent } from './components/sort';
+import 'react-modern-drawer/dist/index.css'
+import './styles/App.scss';
+import { Burger } from './components/burger';
 
 
 function App() {
@@ -35,11 +36,8 @@ function App() {
   
   //search
   const [value, setValue ] = useState('')
-  const [activeSearch, setActiveSearch ] = useState(false)
-  
   const searchRequest = value ? `&search=${value}` : ''
 
-  // const finall = activeSearch === true ? searchRequest : ''
 
   
   //pagination
@@ -68,6 +66,7 @@ function App() {
       FetchData()
     }, [path, sortBy, orderBy,searchRequest])
     
+    //drawer
     const [isOpen, setIsOpen] = useState(false)
     const toggleDrawer = () => {
       setIsOpen((prevState) => !prevState)
@@ -96,14 +95,20 @@ function App() {
     const [ amount, setAmount ] = useState(1)
     const [ cartAmount, setCartAmount ] = useState(amount)
 
+    //burger menu
+    const [ openBurger, setOpenBurger ] = useState(false)
+    const toggleDrawer2 = () => {
+      setOpenBurger((prevState) => !prevState)
+    }
+
 
     return (
       <>
-      <Header toggleDrawer={toggleDrawer} setPath={setPath} setPaginatNone={setPaginatNone}/>
+      <Header toggleDrawer={toggleDrawer} setPath={setPath} setPaginatNone={setPaginatNone} setCurrentPage={setCurrentPage} toggleDrawer2={toggleDrawer2}/>
       {
         paginateNone === true ?  <div className="function-products">
         <div className="fc-prod">
-            <SearchFCComponent value={value} setValue={setValue} setActiveSearch={setActiveSearch}/>
+            <SearchFCComponent value={value} setValue={setValue} />
             <SorfFCComponent setSortProperty={setSortProperty}/>
         </div>
       </div> : ''
@@ -167,9 +172,13 @@ function App() {
       {
          paginateNone === true && load === false ? <PaginationFcComponent itemPerPage={itemPerPage} totalItem={state.length} paginate={paginate}/> : ''
       }
-      <Footer setPath={setPath} setPaginatNone={setPaginatNone}/>
+      <Footer setPath={setPath} setPaginatNone={setPaginatNone} setCurrentPage={setCurrentPage}/>
       <Drawer style={{width: '380px',height: '200%', pointerEvents: 'none'}} open={isOpen} onClose={toggleDrawer} direction='right' >
         <Cart toggleDrawer={toggleDrawer} chooseSize={chooseSize} setChooseSize={setChooseSize} amount={amount} setAmount={setAmount} />
+      </Drawer>
+      
+      <Drawer open={openBurger} onClose={toggleDrawer2} direction='right' >
+        <Burger toggleDrawer={toggleDrawer2} setPath={setPath} setPaginatNone={setPaginatNone} setCurrentPage={setCurrentPage}/>
       </Drawer>
       {
         clothesClose === true ? <ClothesSize setClothesclose={setClothesclose} clothesClose={clothesClose}/> : ''
