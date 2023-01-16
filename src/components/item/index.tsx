@@ -1,12 +1,23 @@
 import { ImArrowRight2 } from 'react-icons/im'
+import uuid from 'react-uuid'
 import { sizeClothes } from '../../COMMON/moks'
 import { SwiperSlider } from '../swiper'
 
-export const Item = ({state, IdItemPage, path, setClothesclose, setCareClose, chooseSize, setChooseSize,amount,setAmount }:any) => {
+export const Item = ({
+    state, 
+    IdItemPage, 
+    path, 
+    setClothesclose, 
+    setCareClose, 
+    chooseSize, 
+    setChooseSize,
+    amount,
+    setAmount, 
+    setOrderNewItem, 
+    toggleDrawer}:any) => {
        
 
     const newItem = state.filter((obj:any) => (obj.id === IdItemPage))
-    
     
     
 
@@ -57,7 +68,9 @@ export const Item = ({state, IdItemPage, path, setClothesclose, setCareClose, ch
                                 <div className="size">
                                     {
                                         sizeClothes.map(elem => (
-                                            <button className={chooseSize === elem.size ? 'active' : ''} key={elem.id} onClick={() => (setChooseSize(elem.size))}>{elem.size}</button>
+                                            <button className={chooseSize === elem.size ? 'active' : ''} 
+                                            key={elem.id} 
+                                            onClick={() => (setChooseSize(elem.size))}>{elem.size}</button>
                                         ))
                                     }
                                 </div>
@@ -72,7 +85,14 @@ export const Item = ({state, IdItemPage, path, setClothesclose, setCareClose, ch
                                     </div>
                                 </div>
                                 <div className="add-cart">
-                                    <button className='btn' >Добавить в Корзину <ImArrowRight2 className='on-right'/></button>
+                                    <button className='btn' onClick={async () =>  (await setOrderNewItem({
+                                        id: uuid(),
+                                        name: elem.name,
+                                        price: elem.price,
+                                        img: elem.image1,
+                                        amount: amount,
+                                        size: chooseSize
+                                    }), toggleDrawer(true) )}>Добавить в Корзину <ImArrowRight2 className='on-right'/></button>
                                 </div>
                             </div>
                         </div>

@@ -160,7 +160,9 @@
                     flex-wrap: wrap;
                     gap: 30px;
                     @include breakpoint(lx) {
+                        flex-direction: column;
                         justify-content: center;
+                        align-items: center;
                     }
                     .amount {
                         h5 {

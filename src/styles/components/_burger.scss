@@ -17,6 +17,7 @@
     .burger-menu {
         width: 100%;
         display: flex;
+        flex-direction: column;
         .burger-item {
             width: 100%;
             text-transform: uppercase;

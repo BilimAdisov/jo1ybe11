@@ -23,9 +23,9 @@ import { ClothesSize } from './components/popup/clothesSize';
 import { CareThings } from './components/popup/careBythings';
 import { SearchFCComponent } from './components/seach';
 import { SorfFCComponent } from './components/sort';
+import { Burger } from './components/burger';
 import 'react-modern-drawer/dist/index.css'
 import './styles/App.scss';
-import { Burger } from './components/burger';
 
 
 function App() {
@@ -61,10 +61,10 @@ function App() {
         .then(res => setState(res.data))
         .catch(err => console.error(err))
         setLoad(false)
-        // setActiveSearch(false)
       }
       FetchData()
     }, [path, sortBy, orderBy,searchRequest])
+    
     
     //drawer
     const [isOpen, setIsOpen] = useState(false)
@@ -72,13 +72,12 @@ function App() {
       setIsOpen((prevState) => !prevState)
     }
 
-    //pagination
+    //pagination page
     const lastItemIndex = currentPage * itemPerPage
     const firstItemIndex = lastItemIndex - itemPerPage
     const currentItem = state.slice(firstItemIndex, lastItemIndex)
 
     const paginate = (pageNumber:any) => setCurrentPage(pageNumber)
-    // const itemID = state.map((elem:any) => elem.id)
 
     //item page enter
     const [IdItemPage, setIdItemPage] = useState(null)
@@ -93,7 +92,6 @@ function App() {
     //order
     const [ chooseSize, setChooseSize ] = useState('S')
     const [ amount, setAmount ] = useState(1)
-    const [ cartAmount, setCartAmount ] = useState(amount)
 
     //burger menu
     const [ openBurger, setOpenBurger ] = useState(false)
@@ -101,10 +99,32 @@ function App() {
       setOpenBurger((prevState) => !prevState)
     }
 
+    //carts order item
+    const [orderItems, setOrderItems]:any = useState([]);
+    const [newOrderItem, setOrderNewItem]:any = useState(null);
+    const [updateItem, setUpdateItem ]:any = useState()
+
+    let nameOrder = orderItems.map((obj:any) => obj.name)
+
+
+    useEffect(() => {
+      const saveItem = () => {
+        if(newOrderItem) {
+          setOrderItems([...orderItems, newOrderItem])
+        }
+        setOrderNewItem(null)
+      }
+      saveItem()
+      setUpdateItem(updateItem)
+      console.log(orderItems)
+    }, [ newOrderItem, orderItems])
+    
+    console.log(orderItems)
+        
 
     return (
       <>
-      <Header toggleDrawer={toggleDrawer} setPath={setPath} setPaginatNone={setPaginatNone} setCurrentPage={setCurrentPage} toggleDrawer2={toggleDrawer2}/>
+      <Header toggleDrawer={toggleDrawer} setPath={setPath} setPaginatNone={setPaginatNone} setCurrentPage={setCurrentPage} toggleDrawer2={toggleDrawer2} orderItems={orderItems}/>
       {
         paginateNone === true ?  <div className="function-products">
         <div className="fc-prod">
@@ -114,6 +134,7 @@ function App() {
       </div> : ''
       }
       <Routes>
+        <Route path='*' element={<Body/>}/>
         <Route path={`${path}/${IdItemPage}`} element={<Item 
         state={state} 
         IdItemPage={IdItemPage} path={path} 
@@ -125,6 +146,8 @@ function App() {
         setAmount={setAmount}
         value={value}
         setValue={setValue}
+        setOrderNewItem={setOrderNewItem}
+        toggleDrawer={toggleDrawer}
         />}/>
         <Route path='/t-shirts' element={<TShirtComponent 
         state={currentItem} 
@@ -173,11 +196,18 @@ function App() {
          paginateNone === true && load === false ? <PaginationFcComponent itemPerPage={itemPerPage} totalItem={state.length} paginate={paginate}/> : ''
       }
       <Footer setPath={setPath} setPaginatNone={setPaginatNone} setCurrentPage={setCurrentPage}/>
+
       <Drawer style={{width: '380px',height: '200%', pointerEvents: 'none'}} open={isOpen} onClose={toggleDrawer} direction='right' >
-        <Cart toggleDrawer={toggleDrawer} chooseSize={chooseSize} setChooseSize={setChooseSize} amount={amount} setAmount={setAmount} />
+        <Cart toggleDrawer={toggleDrawer} 
+        chooseSize={chooseSize} 
+        setChooseSize={setChooseSize} 
+        amount={amount} 
+        setAmount={setAmount} 
+        orderItems={orderItems} 
+        setOrderItems={setOrderItems}
+        updateItem={updateItem}/>
       </Drawer>
-      
-      <Drawer open={openBurger} onClose={toggleDrawer2} direction='right' >
+      <Drawer open={openBurger} onClose={toggleDrawer2} direction='right' className='drawer' size={380}>
         <Burger toggleDrawer={toggleDrawer2} setPath={setPath} setPaginatNone={setPaginatNone} setCurrentPage={setCurrentPage}/>
       </Drawer>
       {
@@ -188,7 +218,6 @@ function App() {
       }
     </>
   );
-
 
 }
 

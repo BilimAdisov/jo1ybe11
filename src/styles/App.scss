@@ -40,3 +40,9 @@
 @mixin xl {
   @media (min-width: 1536px) { @content; }
 }
+
+.drawer {
+  overflow-y: visible;
+  visibility: visible;
+  overflow-x: hidden;
+}

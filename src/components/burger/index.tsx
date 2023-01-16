@@ -11,14 +11,14 @@ export const Burger = ({toggleDrawer, setPath, setPaginatNone, setCurrentPage}:a
     <>
         <div className="burger-wrapper">
             <button className="close-burger" onClick={() => toggleDrawer(false)}> <GrClose/> Скрыть</button>
-            {
-                categoryMenu.map((elem:any) => (
-                    <ul className="burger-menu">
-                        <li className="burger-item" onClick={() => (navigate(`${elem.path}`), setPath(`${elem.path}`),setPaginatNone(true),setCurrentPage(1),toggleDrawer(false)
-                        )}>{elem.rus}</li>
-                    </ul>
-                ))
-            }
+            <ul className="burger-menu">
+                {
+                    categoryMenu.map((elem:any) => (
+                            <li className="burger-item" key={elem.id} onClick={() => (navigate(`${elem.path}`), setPath(`${elem.path}`),setPaginatNone(true),setCurrentPage(1),toggleDrawer(false)
+                            )}>{elem.rus}</li>
+                    ))
+                }
+            </ul>
         </div>
     </>
   )

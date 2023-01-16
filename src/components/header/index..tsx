@@ -5,10 +5,17 @@ import { categoryMenu } from '../../COMMON/moks'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import Logo from '../../assets/image/logo.svg'
 
-export const Header:FC<any> = ({toggleDrawer, setPath, setPaginatNone, setCurrentPage, toggleDrawer2 }:any):JSX.Element => {
+export const Header:FC<any> = ({toggleDrawer, setPath, setPaginatNone, setCurrentPage, toggleDrawer2, orderItems }:any):JSX.Element => {
 
 
     const navigate = useNavigate()
+
+    let totalPrice = 0;
+
+    for (const item of orderItems) {
+        let allprice = item.price * item.amount
+        totalPrice += allprice;
+    }
 
   return (
     <>
@@ -51,7 +58,7 @@ export const Header:FC<any> = ({toggleDrawer, setPath, setPaginatNone, setCurren
                         </a>
                     </li>
                     <li>
-                        <a onClick={() => toggleDrawer(true)}> <BiCart className='cart-icon'/> 0 USD</a>
+                        <a onClick={() => toggleDrawer(true)}> <BiCart className='cart-icon'/>{totalPrice} USD</a>
                     </li>
                     <li>
                         <GiHamburgerMenu color='white' size={30} className='burger' onClick={() => toggleDrawer2(true)}/>
