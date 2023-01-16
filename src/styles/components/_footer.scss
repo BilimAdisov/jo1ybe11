@@ -1,0 +1,270 @@
+
+
+footer {
+    width: 100%;
+    min-height: 600px;
+    background-color: black;
+    .footer {
+        max-width: 90%;
+        max-height: 339px;
+        padding: 40px;
+        .footer-list {
+            @include breakpoint(lx) {
+                display: none;
+            }
+            ul {
+                display: flex;
+                justify-content: space-between;
+                li {
+                    a {
+                        font-size: 16px;
+                        line-height: 100%;
+                        font-weight: 400;
+                        color: white;
+                        text-transform: uppercase;
+                        cursor: pointer;
+                        text-decoration: none;
+                        transition: .5s;
+                        position: relative;
+                    }
+                    a::before {
+                        content: '';
+                        background-color: white;
+    
+                        right: 50%;
+                        bottom: -1px;
+                        width: 0px;
+                        height: 1px;
+                        transition: .5s;
+                    }
+                    a:hover::before {
+                        width: 50%;
+                    }
+                    a::after {
+                        content: '';
+                        background-color: white;
+    
+                        left: 50%;
+                        bottom: -1px;
+                        width: 0;
+                        height: 1px;
+                        transition: .5s;
+                    }
+                    a:hover::after {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+        .footer-info {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-top: 50px;
+            @include breakpoint(lx) {
+                flex-direction: column;
+                align-items: center;
+            }
+            .link-icons {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    gap: 50px;
+                    @include breakpoint(lx) {
+                        gap: 15px;
+                    }
+                    .on {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 15px;@include breakpoint(lx) {
+                            flex-direction: none;
+                            justify-content: center;
+                        }
+                        .jolybell {
+                            .foo-logo {
+                                height: 40px;
+                                transition: 0.3s;
+                            }
+                            .foo-logo:hover {
+                                opacity: 75%;
+                                cursor: pointer;
+                            }
+                        }
+                        .instagram {
+                            width: 40px;
+                            height: 40px;
+                            background-color: white;
+                            border-radius: 999px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            transition: 0.3s;
+                            @include breakpoint(lx) {
+                                display: none;
+                            }
+                            .inst-icon {
+                                width: 60%;
+                            }
+                        }
+                        .instagram:hover {
+                            background-color: #9c9eaf;
+                            cursor: pointer;
+                        }
+                        .vk {
+                            width: 40px;
+                            height: 40px;
+                            background-color: white;
+                            border-radius: 999px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            transition: 0.3s;
+                            @include breakpoint(lx) {
+                                display: none;
+                            }
+                            .vk-icon {
+                                width: 70%;
+                            }
+                        }
+                        .vk:hover {
+                            background-color: #9c9eaf;
+                            cursor: pointer;
+                        }
+                    }
+                    .under {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 10px;
+                        @include breakpoint(lx) {
+                            flex-direction: column;
+                            align-items: center;
+                            text-align: center;
+                        }
+                        .info-years {
+                            color: white;
+                        }
+                         .public-offerta { 
+                            color: #616060;
+                            text-decoration: underline dotted;
+                            transition: 0.3s;
+                            height: 18px;
+                            width: 151px;
+                        }
+                        .public-offerta:hover {
+                            color: #9c9eaf;
+                            cursor: pointer;
+                        }
+                    }
+            }
+            .on-right {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 15px;
+                @include breakpoint(lx) {
+                    align-items: center;
+                    padding-top: 15px;
+                }
+               .work-list {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 30px;
+                    @include breakpoint(lx) {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    .work-time {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 30px;
+                        @include breakpoint(lx) {
+                            gap: 15px;
+                        }
+                        .email {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-end;
+                            @include breakpoint(lx) {
+                                align-items: center;
+                            }
+                            h4 {
+                                font-size: 13px;
+                                color: #616060;
+                                font-weight: 400;
+                            }
+                            h3 {
+                                color: white;
+                                font-size: 18px;
+                                font-weight: 300;
+                            }
+                        }
+                        .support {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-end;
+                            @include breakpoint(lx) {
+                                align-items: center;
+                            }
+                            h4 {
+                                font-size: 13px;
+                                color: #616060;
+                                font-weight: 400;
+                            }
+                            h3 {
+                                color: white;
+                                font-size: 18px;
+                                font-weight: 300;
+                            }
+                        }
+                    }
+                    .payway {
+                        width: 161px;
+                        height: 123px;
+                        h4 {
+                            font-size: 13px;
+                            color: #616060;
+                            font-weight: 400;
+                            margin-bottom: 5px;
+                        }
+                        .pay-icons {
+                            width: 161px;
+                            display: flex;
+                            flex-wrap: wrap;
+                            @include breakpoint(lx) {
+                                
+                            }
+                            .visa {
+                                width: 56px;
+                                height: 17px;
+                                margin-bottom: 20px;
+                                margin-right: 10px;
+                            }
+                            .wayforpay {
+                                width: 85px;
+                                height: 17px;
+                                margin-bottom: 20px;
+                            }
+                            .mastercard {
+                                width: 76px;
+                                height: 64px;
+                                margin-right: 10px;
+                            }
+                            .privat24 {
+                                width: 64px;
+                                height: 64px;
+                            }
+                        }
+                    }
+               }
+                .delivery {
+                    color: #616060;
+                    font-size: 17px;
+                    @include breakpoint(lx) {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+    }
+}

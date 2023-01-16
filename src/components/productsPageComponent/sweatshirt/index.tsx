@@ -2,9 +2,7 @@ import React, { FC } from 'react'
 import { ImArrowRight2 } from 'react-icons/im'
 import { useNavigate } from 'react-router-dom'
 import { SpinnerCircular } from 'spinners-react'
-import { SearchFCComponent } from '../../seach'
-import { SorfFCComponent } from '../../sort'
-import '../index.scss'
+
 
 
 export const SweatshirtComponent:FC<any> = ({state, load, setSortProperty, setIdItemPage, setPaginatNone }:any):JSX.Element => {
@@ -29,7 +27,7 @@ export const SweatshirtComponent:FC<any> = ({state, load, setSortProperty, setId
                     state.map((obj:any) => (
                         <div key={obj.id}>
                             <div className="items" >
-                                <a href="#" onClick={() => (setIdItemPage(obj.id),navigate(`/sweatshirts/${obj.id}`),setPaginatNone(false))}>
+                                <a  onClick={() => (setIdItemPage(obj.id),navigate(`/sweatshirts/${obj.id}`),setPaginatNone(false))}>
                                     <div className="item-container">
                                         <span className='price'>{obj.price} USD</span>
                                         <button className='btn-none'>Подробнее <ImArrowRight2/> </button>

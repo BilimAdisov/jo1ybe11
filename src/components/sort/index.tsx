@@ -1,5 +1,4 @@
 import { FC, useState } from 'react'
-import './index.scss'
 import { sortrus } from '../../COMMON/moks'
 
 export const SorfFCComponent:FC<any> = ({setSortProperty}:any):JSX.Element => {
@@ -19,7 +18,11 @@ export const SorfFCComponent:FC<any> = ({setSortProperty}:any):JSX.Element => {
             sortOpen ? <div className='sort-list'>
             {
                 sortrus.map(elem => (
-                    <span className='sort-item' key={elem.id} onClick={() => (setSortSelect(elem.name),setSortOpen(false),setSortProperty(elem.sortProperty))}>{elem.name}</span>
+                    <span className='sort-item' key={elem.id} onClick={() => (
+                        setSortSelect(elem.name),
+                        setSortOpen(false),
+                        setSortProperty(elem.sortProperty)
+                        )}>{elem.name}</span>
                 ))
             }
                 </div> : ''
