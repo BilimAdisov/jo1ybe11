@@ -3,7 +3,7 @@ import { FC, useEffect, useState } from 'react'
 import {GrClose, GrProductHunt} from 'react-icons/gr'
 import { sizeClothes } from '../../COMMON/moks'
 
-export const Cart:FC<any> = ({toggleDrawer, amount, setAmount, chooseSize, setChooseSize, orderItems, setOrderItems}:any):JSX.Element => {
+export const Cart:FC<any> = ({toggleDrawer, orderItems, setOrderItems}:any):JSX.Element => {
 
   
   // delete item
@@ -95,7 +95,7 @@ useEffect(() => {
                   <div className="things-info">
                     <h4>{obj.name}</h4>
                     <p>размер:</p>
-                    <div className="things-size">
+                    {obj.size && ( <div className="things-size">
                       {
                         sizeClothes.map((elem:any) => (
                           <button 
@@ -105,7 +105,7 @@ useEffect(() => {
                           >{elem.size}</button>
                         ))
                       }
-                    </div>
+                    </div>)}
                     <p>количество:</p>
                     <div className="things-amount">
                       <input type="button" value={obj.amount}/>

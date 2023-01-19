@@ -1,4 +1,5 @@
 import { ImArrowRight2 } from 'react-icons/im'
+import { useLocation } from 'react-router-dom'
 import uuid from 'react-uuid'
 import { sizeClothes } from '../../COMMON/moks'
 import { SwiperSlider } from '../swiper'
@@ -19,7 +20,7 @@ export const Item = ({
 
     const newItem = state.filter((obj:any) => (obj.id === IdItemPage))
     
-    
+    const location = useLocation()
 
   return (
     <>
@@ -63,7 +64,7 @@ export const Item = ({
                                 <button className='how' onClick={() => setClothesclose(true)}>РАЗМЕРНАЯ СЕТКА</button>
                                 <button className='how' onClick={() => setCareClose(true)}>УХОД ЗА ВЕЩЬЮ</button>
                             </div>
-                            <div className="select-size">
+                            {location.pathname === '/bags' ? <div className="select-size">
                                 <h5>Выберите размер:</h5>
                                 <div className="size">
                                     {
@@ -74,7 +75,7 @@ export const Item = ({
                                         ))
                                     }
                                 </div>
-                            </div>
+                            </div> : ''}
                             <div className="buy">
                                 <div className="amount">
                                     <h5>Количество:</h5>
@@ -95,7 +96,7 @@ export const Item = ({
                                     }), toggleDrawer(true) )}>Добавить в Корзину <ImArrowRight2 className='on-right'/></button>
                                 </div>
                             </div>
-                        </div>
+                        </div> 
                     </div>
                 </div>
             </div>

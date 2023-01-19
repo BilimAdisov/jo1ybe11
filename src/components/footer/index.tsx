@@ -42,7 +42,7 @@ export const Footer = ({ setPath, setPaginatNone, setCurrentPage }:any) => {
                     </div>
                     <div className="under">
                         <div className="info-years">© 2022, JolyBell.com</div>
-                        <a href="/" className='public-offerta'>Публичная оферта</a>
+                        <a href="/https://jolybell.com/public_offer_2.pdf" target='blank' className='public-offerta'>Публичная оферта</a>
                     </div>
                 </div>
                 <div className="on-right">

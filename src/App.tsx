@@ -1,5 +1,4 @@
 import {  Route, Routes } from 'react-router-dom';
-import { AuthRootComponents } from './components/auth';
 import { Body } from './components/body';
 import { Footer } from './components/footer';
 import { Header } from './components/header/index.';
@@ -102,9 +101,6 @@ function App() {
     //carts order item
     const [orderItems, setOrderItems]:any = useState([]);
     const [newOrderItem, setOrderNewItem]:any = useState(null);
-    const [updateItem, setUpdateItem ]:any = useState()
-
-    let nameOrder = orderItems.map((obj:any) => obj.name)
 
 
     useEffect(() => {
@@ -115,12 +111,9 @@ function App() {
         setOrderNewItem(null)
       }
       saveItem()
-      setUpdateItem(updateItem)
       console.log(orderItems)
     }, [ newOrderItem, orderItems])
-    
-    console.log(orderItems)
-        
+            
 
     return (
       <>
@@ -183,8 +176,6 @@ function App() {
         setValue={setValue}
         />}/>
         <Route path='/' element={<Body/>}/>
-        <Route path='/register' element={<AuthRootComponents/>}/>
-        <Route path='/login' element={<AuthRootComponents/>}/>
         <Route path='/pants-shorts' element={<PantsShortsComponent/>}/>
         <Route path='/polo' element={<PoloComponent/>}/>
         <Route path='/pajams' element={<PajamsComponent/>}/>
@@ -200,12 +191,8 @@ function App() {
       <Drawer style={{width: '380px',height: '200%', pointerEvents: 'none'}} open={isOpen} onClose={toggleDrawer} direction='right' >
         <Cart toggleDrawer={toggleDrawer} 
         chooseSize={chooseSize} 
-        setChooseSize={setChooseSize} 
-        amount={amount} 
-        setAmount={setAmount} 
         orderItems={orderItems} 
-        setOrderItems={setOrderItems}
-        updateItem={updateItem}/>
+        setOrderItems={setOrderItems}/>
       </Drawer>
       <Drawer open={openBurger} onClose={toggleDrawer2} direction='right' className='drawer' size={380}>
         <Burger toggleDrawer={toggleDrawer2} setPath={setPath} setPaginatNone={setPaginatNone} setCurrentPage={setCurrentPage}/>
