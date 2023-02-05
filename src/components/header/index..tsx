@@ -4,8 +4,9 @@ import { useNavigate } from 'react-router-dom'
 import { categoryMenu } from '../../COMMON/moks'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import Logo from '../../assets/image/logo.svg'
+import { IPropsHeader } from '../../COMMON/types/header/intex'
 
-export const Header:FC<any> = ({toggleDrawer, setPath, setPaginatNone, setCurrentPage, toggleDrawer2, orderItems }:any):JSX.Element => {
+export const Header:FC<IPropsHeader> = ({toggleDrawer, setPath, setPaginatNone, setCurrentPage, toggleDrawer2, orderItems }:IPropsHeader):JSX.Element => {
 
 
     const navigate = useNavigate()
@@ -16,6 +17,7 @@ export const Header:FC<any> = ({toggleDrawer, setPath, setPaginatNone, setCurren
         let allprice = item.price * item.amount
         totalPrice += allprice;
     }
+    console.log(orderItems)
 
   return (
     <>
@@ -23,7 +25,9 @@ export const Header:FC<any> = ({toggleDrawer, setPath, setPaginatNone, setCurren
         <div className="logo">
             <div className="logo-container">
                 <div className="header-leftstrip"></div>
+                <div className="main-logo">
                     <img src={Logo} alt="img alt" onClick={() => (navigate('/'),setPaginatNone(false),setCurrentPage(1))}/>
+                </div>
                 <div className="header-rightstrip"></div>
             </div>
         </div>
@@ -53,7 +57,7 @@ export const Header:FC<any> = ({toggleDrawer, setPath, setPaginatNone, setCurren
                         <a >РУС</a>
                     </li>
                     <li>
-                        <a >
+                        <a onClick={() => navigate('/authorization')}>
                             <BiUser className='user-icon' size={20}/>
                         </a>
                     </li>

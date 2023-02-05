@@ -1,4 +1,4 @@
-import {  Route, Routes } from 'react-router-dom';
+import {  Route, Routes, useLocation } from 'react-router-dom';
 import { Body } from './components/body';
 import { Footer } from './components/footer';
 import { Header } from './components/header/index.';
@@ -7,7 +7,6 @@ import { TShirtComponent } from './components/productsPageComponent/t-shirt';
 import { Cart } from './components/cart/cart';
 import { useEffect, useState } from 'react';
 import Drawer from 'react-modern-drawer'
-import axios from 'axios';
 import { BagComponent } from './components/productsPageComponent/bags';
 import { SweatshirtComponent } from './components/productsPageComponent/sweatshirt';
 import { HoodieComponent } from './components/productsPageComponent/hoodie/hoodie';
@@ -25,6 +24,8 @@ import { SorfFCComponent } from './components/sort';
 import { Burger } from './components/burger';
 import 'react-modern-drawer/dist/index.css'
 import './styles/App.scss';
+import { LayoutComponent } from './components/auth/layout';
+import { instance } from './utils/axios/axios';
 
 
 function App() {
@@ -50,13 +51,12 @@ function App() {
   
   //API
   const [state, setState] = useState([])
-  const URL = 'https://63a9c82c594f75dc1dc040b7.mockapi.io'
   
   //get request
   useEffect(() => {
       async function FetchData() {
         setLoad(true)
-        await axios.get(`${URL}${path}?sortBy=${sortBy}&order=${orderBy}${searchRequest}`)
+        await instance.get(`${path}?sortBy=${sortBy}&order=${orderBy}${searchRequest}`)
         .then(res => setState(res.data))
         .catch(err => console.error(err))
         setLoad(false)
@@ -101,23 +101,28 @@ function App() {
     //carts order item
     const [orderItems, setOrderItems]:any = useState([]);
     const [newOrderItem, setOrderNewItem]:any = useState(null);
-
+    const itemName = orderItems.map((el:any) => el.name)
 
     useEffect(() => {
-      const saveItem = () => {
-        if(newOrderItem) {
+      if(newOrderItem) {
+        const saveItem = () => {
+          
           setOrderItems([...orderItems, newOrderItem])
         }
         setOrderNewItem(null)
+        saveItem()
       }
-      saveItem()
       console.log(orderItems)
     }, [ newOrderItem, orderItems])
             
 
+    const location = useLocation()
+
     return (
       <>
-      <Header toggleDrawer={toggleDrawer} setPath={setPath} setPaginatNone={setPaginatNone} setCurrentPage={setCurrentPage} toggleDrawer2={toggleDrawer2} orderItems={orderItems}/>
+      {
+        location.pathname === '/register' || location.pathname === '/authorization' ? '' : <Header toggleDrawer={toggleDrawer} setPath={setPath} setPaginatNone={setPaginatNone} setCurrentPage={setCurrentPage} toggleDrawer2={toggleDrawer2} orderItems={orderItems}/>
+      } 
       {
         paginateNone === true ?  <div className="function-products">
         <div className="fc-prod">
@@ -127,6 +132,8 @@ function App() {
       </div> : ''
       }
       <Routes>
+        <Route path='/register' element={<LayoutComponent/>}/>
+        <Route path='/authorization' element={<LayoutComponent/>}/>
         <Route path='*' element={<Body/>}/>
         <Route path={`${path}/${IdItemPage}`} element={<Item 
         state={state} 
@@ -186,11 +193,12 @@ function App() {
       {
          paginateNone === true && load === false ? <PaginationFcComponent itemPerPage={itemPerPage} totalItem={state.length} paginate={paginate}/> : ''
       }
-      <Footer setPath={setPath} setPaginatNone={setPaginatNone} setCurrentPage={setCurrentPage}/>
+      {
+        location.pathname === '/register' || location.pathname === '/authorization' ? '' : <Footer setPath={setPath} setPaginatNone={setPaginatNone} setCurrentPage={setCurrentPage}/>
+      } 
 
       <Drawer style={{width: '380px',height: '200%', pointerEvents: 'none'}} open={isOpen} onClose={toggleDrawer} direction='right' >
         <Cart toggleDrawer={toggleDrawer} 
-        chooseSize={chooseSize} 
         orderItems={orderItems} 
         setOrderItems={setOrderItems}/>
       </Drawer>

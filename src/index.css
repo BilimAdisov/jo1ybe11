@@ -1,4 +1,10 @@
 
 *::-webkit-scrollbar {
     display: none;
+    --swiper-theme-color: black;
+}
+
+
+:root {
+    --swiper-theme-color: black;
 }

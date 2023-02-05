@@ -30,6 +30,7 @@ footer {
                     a::before {
                         content: '';
                         background-color: white;
+                        position: absolute;
                         right: 50%;
                         bottom: -1px;
                         width: 0px;
@@ -42,6 +43,7 @@ footer {
                     a::after {
                         content: '';
                         background-color: white;
+                        position: absolute;
                         left: 50%;
                         bottom: -1px;
                         width: 0;

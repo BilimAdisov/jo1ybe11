@@ -2,8 +2,9 @@ import {MdArrowBackIosNew} from 'react-icons/md'
 import { FC, useEffect, useState } from 'react'
 import {GrClose, GrProductHunt} from 'react-icons/gr'
 import { sizeClothes } from '../../COMMON/moks'
+import { IOrderItems, IPropsCart } from '../../COMMON/types/cart'
 
-export const Cart:FC<any> = ({toggleDrawer, orderItems, setOrderItems}:any):JSX.Element => {
+export const Cart:FC<IPropsCart> = ({toggleDrawer, orderItems, setOrderItems}:IPropsCart):JSX.Element => {
 
   
   // delete item
@@ -20,7 +21,7 @@ export const Cart:FC<any> = ({toggleDrawer, orderItems, setOrderItems}:any):JSX.
     if(cartSize) {
       const changeSize = () => {
         if(orderItems.length) {
-            let newSizeItem = orderItems.find((product:any) => ID === product.id) //obj
+            let newSizeItem:any = orderItems.find((product:any) => ID === product.id) //obj
             newSizeItem.size = cartSize // change
         }
         setCartSize(null)
@@ -37,7 +38,7 @@ export const Cart:FC<any> = ({toggleDrawer, orderItems, setOrderItems}:any):JSX.
   useEffect(() => {
     if(plusID) {
       const plus = () => {
-        const newPlusAmount = orderItems.find((product:any) => plusID === product.id );
+        const newPlusAmount:any = orderItems.find((product:any) => plusID === product.id );
         newPlusAmount.amount++
       }
       setItemAmount()
@@ -55,7 +56,7 @@ export const Cart:FC<any> = ({toggleDrawer, orderItems, setOrderItems}:any):JSX.
 useEffect(() => {
   if(minusID) {
     const minus = () => {
-      const newMinusAmount = orderItems.find((product:any) => minusID === product.id );
+      const newMinusAmount:any = orderItems.find((product:any) => minusID === product.id );
       newMinusAmount.amount > 1 ? newMinusAmount.amount-- : console.log()
       
     }

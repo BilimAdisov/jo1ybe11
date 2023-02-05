@@ -64,7 +64,7 @@ export const Item = ({
                                 <button className='how' onClick={() => setClothesclose(true)}>РАЗМЕРНАЯ СЕТКА</button>
                                 <button className='how' onClick={() => setCareClose(true)}>УХОД ЗА ВЕЩЬЮ</button>
                             </div>
-                            {location.pathname === '/bags' ? <div className="select-size">
+                            { elem.li || <div className="select-size">
                                 <h5>Выберите размер:</h5>
                                 <div className="size">
                                     {
@@ -75,7 +75,7 @@ export const Item = ({
                                         ))
                                     }
                                 </div>
-                            </div> : ''}
+                            </div> }
                             <div className="buy">
                                 <div className="amount">
                                     <h5>Количество:</h5>
