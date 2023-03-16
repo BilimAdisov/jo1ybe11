@@ -1,0 +1,162 @@
+.auth {
+    width: 100%;
+    height: 763px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    background-color: black;
+    .logo {
+        width: 10%;
+        cursor: pointer;
+    }
+    .register {
+        width: 40%;
+        height: 60%;
+        background-color: #ebe6e8;
+        border-radius: 24px;
+        .reg-wrapper {
+            h1 {
+                letter-spacing: 1px;
+                text-transform:capitalize;
+            }
+            .input-reg {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+                padding-top: 20px;
+                input {
+                    width: 70%;
+                    height: 30px;
+                    border: none;
+                    border-radius: 8px;
+                    padding-left: 15px;
+                }
+            }
+            .btn-reg {
+                width: 100% ;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 20px;
+                gap: 15px;
+                .log-up {
+                    width: 70%;
+                    height: 30px;
+                    border: none;
+                    border-radius: 8px;
+                    background-color: black;
+                    color: #ebe6e8;
+                    font-size: 18px;
+                    letter-spacing: 1px;
+                    cursor: pointer;
+                    transition: 0.5s;
+                }
+                .log-up:hover {
+                    background: rgb(63, 63, 63);
+                }
+                .forgot {
+                    display: flex;
+                    gap: 10px;
+                    .forget-password {
+                        border: none;
+                        background:local;
+                        cursor: pointer;
+                        color: purple;
+                        font-size: 18px;
+                        transition: 0.5s;
+                    }
+                    .forget-password:hover {
+                        color: gray;
+                    }
+                    .exist-account {
+                        border: none;
+                        background: local;
+                        cursor: pointer;
+                        font-size: 18px;
+                        transition: 0.5s;
+                    }
+                    .exist-account:hover {
+                        color: gray;
+                    }
+                }
+            }
+        }
+        .author-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            h1 {
+                letter-spacing: 1px;
+                text-transform: capitalize;
+            }
+            .inp-author {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+                padding-top: 20px;
+                input {
+                    width: 70%;
+                    height: 30px;
+                    border: none;
+                    border-radius: 8px;
+                    padding-left: 15px;
+                }
+            }
+            .btn-author {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 20px;
+                gap: 15px;
+                .active-author {
+                    width: 70%;
+                    height: 30px;
+                    border: none;
+                    border-radius: 8px;
+                    background-color: black;
+                    color: #ebe6e8;
+                    font-size: 18px;
+                    letter-spacing: 1px;
+                    cursor: pointer;
+                    transition: 0.5s;
+                }
+                .active-author:hover {
+                    background: rgb(63, 63, 63);
+                }
+                .forgot {
+                    display: flex;
+                    gap: 10px;
+                    .forgot-password {
+                        border: none;
+                        background:local;
+                        cursor: pointer;
+                        color: purple;
+                        font-size: 18px;
+                        transition: 0.5s;
+                    }
+                    .forget-password:hover {
+                        color: gray;
+                    }
+                    .reg-link {
+                        border: none;
+                        background: local;
+                        cursor: pointer;
+                        font-size: 18px;
+                        transition: 0.5s;
+                    }
+                    .reg-link:hover {
+                        color: gray;
+                    }
+                }
+            }
+        }
+    }
+
+}

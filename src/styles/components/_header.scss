@@ -1,11 +1,22 @@
 header {
+    background-color: black;
+    @include breakpoint(lx) {
+        display: flex;
+        flex-direction: row;
+        height: 109px;
+        border-bottom: 1px solid #616161;
+    }
     .logo {
         width: 100%;
         height: 109px;
-        background-color: black;
+        background: local;
         display: flex;
         justify-content: center;
         align-items: center;
+        @include breakpoint(lx) {
+            width: 50%;
+            height: 100%;
+        }
         .logo-container {
             width: 100%;
             display: flex;
@@ -13,13 +24,20 @@ header {
             justify-content: center;
             align-items: flex-end;
             position: relative;
+            @include breakpoint(lx) {
+                justify-content: flex-start;
+                padding-left: 25px;
+            }
             .header-leftstrip {
-                background-color: azure;
+                background-color: #fff;
                 height: 3px;
                 width: 50%;
                 position: absolute;
                 left: 0px;
                 animation: leftLine 5s;
+                @include breakpoint(lx) {
+                    display: none;
+                }
             }
             @keyframes leftLine {
                 from {
@@ -30,12 +48,15 @@ header {
                 }
             }
             .header-rightstrip {
-                background-color: azure;
+                background-color: #fff;
                 height: 3px;
                 width: 50%;
                 position: absolute;
                 right: 0px;
                 animation: rightLine 5s;
+                @include breakpoint(lx) {
+                    display: none;
+                }
             }
             @keyframes rightLine {
                 from {
@@ -45,9 +66,20 @@ header {
                     width: 50%;
                 }
             }
-            img {
+            .main-logo {
+                padding: 0;
+                margin: 0;
                 width: 230px;
-                cursor: pointer;
+                height: max-content;
+                height:auto;
+                @include breakpoint(lx) {
+                    width: 30%;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -58,8 +90,15 @@ header {
         flex-direction: column;
         justify-content: center;
         background-color: black;
+        @include breakpoint(lx) {
+            width: 50%;
+            height: 109px;
+        }
         .header-container {
             .header-list {
+                @include breakpoint(lx) {
+                    display: none;
+                }
                 ul {
                     display: flex;
                     justify-content: space-between;
@@ -110,8 +149,10 @@ header {
             display: flex;
             justify-content:flex-end;
             padding-right: 55px;
+            background: local;
             ul {
                 display: flex;
+                align-items: center;
                 gap: 16px;
                 li {
                     a {
@@ -132,8 +173,8 @@ header {
                         color: #9c9eaf;
                     }
                     .user-icon {
-                        width: 21px;
-                        height: 19.1px;
+                        // width: 25px;
+                        height: 25px;
                     }
                     .user-icon:hover {
                         color: #9c9eaf;
@@ -141,6 +182,12 @@ header {
                     .cart-icon {
                         width: 21.05px;
                         height: 20.78px;
+                    }
+                    .burger {
+                        display: none;
+                        @include breakpoint(lx) {
+                            display: flex;
+                        }
                     }
                 }
             }

@@ -2,9 +2,7 @@ import React, { FC } from 'react'
 import { ImArrowRight2 } from 'react-icons/im'
 import { useNavigate } from 'react-router-dom'
 import { SpinnerCircular } from 'spinners-react'
-import { SearchFCComponent } from '../../seach'
-import { SorfFCComponent } from '../../sort'
-import '../index.scss'
+
 
 export const HoodieComponent:FC<any> = ({state, load, setSortProperty, setIdItemPage, setPaginatNone }:any):JSX.Element => {
 

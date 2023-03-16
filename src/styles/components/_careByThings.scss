@@ -10,7 +10,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    .modal-wrapper {
+    @include breakpoint(lx) {
+        height: 350%;
+    }
+    .modal-container {
         width: 400px;
         height: 220px;
         background-color: white;
@@ -21,6 +24,9 @@
         z-index: 400;
         padding: 50px;
         border-radius: 28px;
+        @include breakpoint(lx) {
+            width: 55%;
+        }
         .close-modal {
             cursor: pointer;
             padding: 0 0 0 390px;

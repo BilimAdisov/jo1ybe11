@@ -1,7 +1,14 @@
 .sort {
     text-align: center;
-    width: 200px;
+    width: 18%;
     padding-right: 50px;
+    z-index: 99;
+    @include breakpoint(lx) {
+        width: 25%;
+    }
+    @include breakpoint(lm) {
+        width: 30%;
+    }
     p {
         padding-bottom: 25px;
         width: 100%;

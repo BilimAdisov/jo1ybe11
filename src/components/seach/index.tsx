@@ -1,10 +1,5 @@
-import { useState } from 'react'
-import { GrSearch } from 'react-icons/gr'
-import './index.scss'
 
-export const SearchFCComponent = ({value, setValue, setActiveSearch }:any) => {
-
-  // const [ searchOpen, setSearchOpen ] = useState(false)
+export const SearchFCComponent = ({value, setValue }:any) => {
  
   return (
     <>

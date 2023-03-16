@@ -10,6 +10,19 @@
     border: none;
 }
 
+.inp:focus {
+    box-shadow:    
+    0 0 1px #fff,
+    0 0 2px #fff,
+    0 0 5px #fff,
+    0 0 11px #007aff,
+    0 0 30px #007aff,
+    0 0 55px #007aff,
+    0 0 80px #007aff,
+    0 0 20px #007aff,
+;
+}
+
 // .search-btn {
 //     width: 30px;
 //     height: 30px;

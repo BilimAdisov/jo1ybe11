@@ -8,30 +8,31 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     .phara {
         text-transform: uppercase;
         font-size:x-large;
         font-weight: 600;
-        position: absolute;
         animation: shake 6s infinite;
+        text-align: center;
+        @include breakpoint(lx) {
+            animation: none;
+            font-size: large;
+        }
         span {
-
             padding: 9px 15px;
             background-color: black;
             color: white;
-            width: 104.5px;
-            height: 43.6px;
+            width: 10%;
             font-weight: 700;
         }
     }
 }
 @keyframes shake {
     50% {
-        transform: translateX(100px);
+        transform: translateX(7%)
     }
     70% {
-        transform: translateX(-100px);
+        transform: translateX(-7%);
     }
     90% {
         transform: scale(1.1);

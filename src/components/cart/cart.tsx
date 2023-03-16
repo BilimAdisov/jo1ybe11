@@ -1,12 +1,79 @@
 import {MdArrowBackIosNew} from 'react-icons/md'
-import { FC } from 'react'
-import {GrClose} from 'react-icons/gr'
-import './cart.scss'
+import { FC, useEffect, useState } from 'react'
+import {GrClose, GrProductHunt} from 'react-icons/gr'
 import { sizeClothes } from '../../COMMON/moks'
+import { IOrderItems, IPropsCart } from '../../COMMON/types/cart'
 
-export const Cart:FC<any> = ({toggleDrawer, amount, setAmount, chooseSize, setChooseSize }:any):JSX.Element => {
+export const Cart:FC<IPropsCart> = ({toggleDrawer, orderItems, setOrderItems}:IPropsCart):JSX.Element => {
 
-  // orderItem.map((elem:any) => console.log(elem))
+  
+  // delete item
+  const deleteProduct = (id:any) => {
+    setOrderItems(orderItems.filter((product:any) => id !== product.id))
+  }
+  
+
+  //change size
+  const [ cartSize, setCartSize ]:any = useState(null)
+  const [ID, setID ] = useState('')
+
+  useEffect(() => {
+    if(cartSize) {
+      const changeSize = () => {
+        if(orderItems.length) {
+            let newSizeItem:any = orderItems.find((product:any) => ID === product.id) //obj
+            newSizeItem.size = cartSize // change
+        }
+        setCartSize(null)
+      }
+      changeSize()
+    }
+  }, [cartSize])
+  
+  
+  // increament
+  const [ plusID, setPlusID ]:any = useState(null)
+  const [ itemAmount, setItemAmount ]:any = useState()
+  
+  useEffect(() => {
+    if(plusID) {
+      const plus = () => {
+        const newPlusAmount:any = orderItems.find((product:any) => plusID === product.id );
+        newPlusAmount.amount++
+      }
+      setItemAmount()
+      plus()
+      setPlusID(null)
+    }
+  }, [itemAmount])
+  
+  
+
+  // decreament
+  const [ minusID, setMinusID ]:any = useState(null)
+  const [ minusItemAmount, setminusItemAmount ]:any = useState()
+
+useEffect(() => {
+  if(minusID) {
+    const minus = () => {
+      const newMinusAmount:any = orderItems.find((product:any) => minusID === product.id );
+      newMinusAmount.amount > 1 ? newMinusAmount.amount-- : console.log()
+      
+    }
+    setminusItemAmount()
+    minus()
+    setMinusID(null)
+  }
+}, [minusItemAmount])
+
+  //total price
+  let totalPrice = 0;
+
+  for (const item of orderItems) {
+    let allprice = item.price * item.amount
+    totalPrice += allprice;
+  }
+
 
   return (
     <>
@@ -17,32 +84,40 @@ export const Cart:FC<any> = ({toggleDrawer, amount, setAmount, chooseSize, setCh
             <div className="if-none">
               <h1>Мои покупки</h1>
             </div>
-            <div className="things">
-              <div className="image">
-                <img src="https://cdn.jolybell.com/images/rjM38ixualwwCmQ.webp?width=566&height=540&quality=90" alt="" />
-                <span className='delete-things'>
-                  <GrClose size={10} className='delete-btn'/>
-                </span>
-              </div>
-              <div className="things-info">
-                <h4>Вышиванка Ромб</h4>
-                <p>размер:</p>
-                <div className="things-size">
-                  {
-                    sizeClothes.map((elem:any) => (
-                      <button className={chooseSize === elem.size ? 'active-btn' : ''} key={elem.id} onClick={() => setChooseSize(elem.size)}>{elem.size}</button>
-                    ))
-                  }
+            {
+              orderItems && (orderItems.map((obj:any, i:number ) => (
+                <div className="things" key={obj.id}>
+                  <div className="image">
+                    <img src={obj.img} alt="amg" />
+                    <span className='delete-things' onClick={() => deleteProduct(obj.id)}>
+                      <GrClose size={10} className='delete-btn'/>
+                    </span>
+                  </div>
+                  <div className="things-info">
+                    <h4>{obj.name}</h4>
+                    <p>размер:</p>
+                    {obj.size && ( <div className="things-size">
+                      {
+                        sizeClothes.map((elem:any) => (
+                          <button 
+                          className={obj.size === elem.size ? 'active-btn' : ''} 
+                          key={elem.id} 
+                          onClick={() => ( setCartSize(elem.size), setID(obj.id) )}
+                          >{elem.size}</button>
+                        ))
+                      }
+                    </div>)}
+                    <p>количество:</p>
+                    <div className="things-amount">
+                      <input type="button" value={obj.amount}/>
+                      <button onClick={() => (setPlusID(obj.id),setItemAmount(obj.amount))}>+</button>
+                      <button onClick={() => (setMinusID(obj.id), setminusItemAmount(obj.amount))}>---</button>
+                    </div>
+                    <span className='things-coast'>{obj.price * obj.amount} USD</span>
+                  </div>
                 </div>
-                <p>количество:</p>
-                <div className="things-amount">
-                  <input type="button" value={amount}/>
-                  <button onClick={() => (setAmount(amount+1))}>+</button>
-                  <button onClick={() => (amount === 1 ? '' : setAmount(amount-1))}>---</button>
-                </div>
-                <span className='things-coast'>70.38 USD</span>
-              </div>
-            </div>
+              )))
+            } 
         </div>
         <div className="promocode">
             <h3>Промокод</h3>
@@ -54,7 +129,7 @@ export const Cart:FC<any> = ({toggleDrawer, amount, setAmount, chooseSize, setCh
         <div className="finally">
           <div className='total-price'>
             <h3>итоги:</h3>
-            <h2>0 USD</h2>
+            <h2>{totalPrice} USD</h2>
           </div>
           <button className='finall-btn'>Оформить заказ</button>
         </div>
@@ -63,3 +138,4 @@ export const Cart:FC<any> = ({toggleDrawer, amount, setAmount, chooseSize, setCh
     </>
   )
 }
+          

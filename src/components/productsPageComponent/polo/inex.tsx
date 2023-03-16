@@ -1,5 +1,4 @@
 import React, { FC } from 'react'
-import '../index.scss'
 
 
 export const PoloComponent:FC = ():JSX.Element => {
